@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { createContext, useState, useContext, ReactNode, useCallback } from "react";
@@ -17,7 +18,6 @@ interface GameContextType {
   handleChoice: (choice: Choice) => void;
   isLoading: boolean;
   setLoading: (loading: boolean) => void;
-  setProphecy: (prophecy: string) => void;
 }
 
 const GameContext = createContext<GameContextType | undefined>(undefined);
@@ -50,15 +50,11 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
       };
     });
   }, []);
-
-  const setProphecy = (prophecy: string) => {
-    setGameState(prev => ({ ...prev, prophecy }));
-  };
   
   const currentScene = story[gameState.currentSceneId];
 
   return (
-    <GameContext.Provider value={{ gameState, currentScene, handleChoice, isLoading, setLoading, setProphecy }}>
+    <GameContext.Provider value={{ gameState, currentScene, handleChoice, isLoading, setLoading }}>
       {children}
     </GameContext.Provider>
   );

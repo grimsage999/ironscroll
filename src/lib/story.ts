@@ -371,6 +371,7 @@ export const story: Record<string, Scene> = {
     id: "archives_sneak_check",
     title: "Under Cover of Darkness",
     text: "You wait for nightfall and approach the archives. The guard is gone, but the lock is sturdy. How will you get in?",
+    image: "dusty-archives",
     choices: [
         {
             text: "Use the Crystalline Shard to resonate with the lock.",

@@ -1,3 +1,4 @@
+
 import type { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export interface GameState {
@@ -5,7 +6,6 @@ export interface GameState {
   townFavor: number;
   piperInsight: number;
   inventory: string[];
-  prophecy?: string;
 }
 
 export interface Choice {
@@ -23,7 +23,6 @@ export interface Choice {
     inventoryRemove?: string[];
   };
   nextScene: string;
-  action?: 'generateProphecy';
   variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
 }
 
