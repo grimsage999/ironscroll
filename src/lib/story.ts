@@ -324,18 +324,6 @@ export const story: Record<string, Scene> = {
       }
     ],
   },
-  prophecy_revealed: {
-    id: "prophecy_revealed",
-    title: "Whispers of the Scroll",
-    text: (state) => `You focus your will, tracing the patterns on the scroll. The air grows cold, and a voice, not your own, echoes in your mind, speaking a cryptic prophecy:\n\n"${state.prophecy}"\n\nThe words hang in the air, heavy with meaning. You now understand a deeper truth about the Piper's power.`,
-    choices: [
-      {
-        text: "Follow the prophecy's guidance.",
-        effects: { piperInsight: 3, inventoryAdd: ["Iron Scroll", "Revealed Prophecy"] },
-        nextScene: "ending_prophecy",
-      },
-    ],
-  },
   archives_sneak_fail: {
     id: "archives_sneak_fail",
     title: "Caught!",
@@ -358,7 +346,7 @@ export const story: Record<string, Scene> = {
     text: "You follow the trail of toys deep into the woods. The faint music grows stronger, a sweet, cloying melody that muddles your thoughts. You lose your way, wandering in circles, another lost soul claimed by the Piper's unending song.",
     choices: [{ text: "Start Over", nextScene: "start" }],
   },
-reading_insight: {
+  ending_insight: {
     id: "ending_insight",
     title: "A Glimmer of Hope",
     image: "good-ending",
