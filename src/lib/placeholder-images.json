@@ -2,33 +2,33 @@
   "placeholderImages": [
     {
       "id": "hamelin-square",
-      "description": "The dreary town square of Hamelin under a grey sky.",
-      "imageUrl": "https://images.unsplash.com/photo-1651902518834-4e29974d83a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtZWRpZXZhbCUyMHRvd258ZW58MHx8fHwxNzYxOTQ2MDAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "medieval town"
+      "description": "The dreary town square of Hamelin in pixel art.",
+      "imageUrl": "https://images.unsplash.com/photo-1599169055013-0027048243b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwaXhlbCUyMGFydCUyMG1lZGlldmFsJTIwdG93bnxlbnwwfHx8fDE3NjE5ODIwODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pixel art medieval town"
     },
     {
       "id": "tavern-interior",
-      "description": "The dimly lit interior of a medieval tavern.",
-      "imageUrl": "https://images.unsplash.com/photo-1596727669284-4ff1932f937c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmYW50YXN5JTIwdGF2ZXJufGVufDB8fHx8MTc2MTk3ODI2N3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "fantasy tavern"
+      "description": "The dimly lit interior of a pixel art medieval tavern.",
+      "imageUrl": "https://images.unsplash.com/photo-1663719720334-4e848b683a22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwaXhlbCUyMGFydCUyMHRhdmVybnxlbnwwfHx8fDE3NjE5ODIwODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pixel art tavern"
     },
     {
       "id": "dusty-archives",
-      "description": "Ancient archives filled with scrolls and dusty tomes.",
-      "imageUrl": "https://images.unsplash.com/photo-1595123550441-d377e017de6a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxvbGQlMjBsaWJyYXJ5fGVufDB8fHx8MTc2MTg5ODQ3NXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "old library"
+      "description": "Ancient archives filled with scrolls and dusty tomes in pixel art.",
+      "imageUrl": "https://images.unsplash.com/photo-1628076020314-e35739eedfbd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwaXhlbCUyMGFydCUyMGxpYnJhcnl8ZW58MHx8fHwxNzYxOTgyMDg3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pixel art library"
     },
     {
       "id": "bad-ending",
-      "description": "A dark, foreboding alleyway at night.",
-      "imageUrl": "https://images.unsplash.com/photo-1512386923336-1440f4afe1d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxkYXJrJTIwYWxsZXl8ZW58MHx8fHwxNzYxOTQzNjYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "dark alley"
+      "description": "A dark, foreboding pixel art alleyway at night.",
+      "imageUrl": "https://images.unsplash.com/photo-1584616042062-8f069d33c4a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwaXhlbCUyMGFydCUyMGRhcmslMjBhbGxleXxlbnwwfHx8fDE3NjE5ODIwODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pixel art dark alley"
     },
     {
       "id": "good-ending",
-      "description": "Sunlight breaking through clouds over a medieval town.",
-      "imageUrl": "https://images.unsplash.com/photo-1738690915816-c1a864208c9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzdW5saWdodCUyMGNsb3Vkc3xlbnwwfHx8fDE3NjE5MDYyNjd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "sunlight clouds"
+      "description": "Sunlight breaking through clouds over a pixel art medieval town.",
+      "imageUrl": "https://images.unsplash.com/photo-1646587630023-835b1c30064a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwaXhlbCUyMGFydCUyMHN1bmxpZ2h0fGVufDB8fHx8MTc2MTk4MjA4OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pixel art sunlight"
     }
   ]
 }

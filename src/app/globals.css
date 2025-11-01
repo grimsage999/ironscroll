@@ -82,4 +82,7 @@
   body {
     @apply bg-background text-foreground;
   }
+  .image-pixelated {
+    image-rendering: pixelated;
+  }
 }

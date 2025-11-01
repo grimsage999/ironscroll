@@ -59,7 +59,7 @@ export default function GameClient() {
   return (
     <div className="w-full flex flex-col items-center">
       <StatusBar />
-      <Card className="w-full max-w-4xl shadow-lg border-border/30 overflow-hidden">
+      <Card className="w-full max-w-4xl shadow-lg border-border/30 overflow-hidden bg-black">
         <div className="relative">
           {sceneImage && (
             <div className="relative aspect-video w-full">
@@ -67,7 +67,7 @@ export default function GameClient() {
                 src={sceneImage.imageUrl}
                 alt={currentScene.title}
                 fill
-                className="object-cover"
+                className="object-cover image-pixelated"
                 data-ai-hint={sceneImage.imageHint}
                 priority
               />
@@ -75,10 +75,10 @@ export default function GameClient() {
             </div>
           )}
            <CardHeader className={sceneImage ? "absolute bottom-0 text-white" : ""}>
-            <CardTitle className="font-headline text-3xl md:text-4xl">{currentScene.title}</CardTitle>
+            <CardTitle className="font-headline text-4xl md:text-5xl">{currentScene.title}</CardTitle>
           </CardHeader>
         </div>
-        <CardContent className="p-6">
+        <CardContent className="p-6 text-lg">
           <div className="prose prose-invert max-w-none text-foreground/90 leading-relaxed">
             {textContent.split('\n').map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
@@ -97,14 +97,14 @@ export default function GameClient() {
                   <Button
                     key={index}
                     onClick={() => onChoiceClick(choice)}
-                    className="w-full transition-all duration-300 transform hover:scale-105 h-auto py-3"
+                    className="w-full transition-all duration-300 transform hover:scale-105 h-auto py-3 text-lg"
                     variant={choice.variant || (choice.nextScene === 'start' ? 'destructive' : 'default')}
                     disabled={disabled}
                     aria-disabled={disabled}
                   >
                     <div className="flex flex-col">
                       <span>{choice.text}</span>
-                      {requirementText && <span className="text-xs opacity-70 font-normal">{requirementText}</span>}
+                      {requirementText && <span className="text-sm opacity-70 font-normal">{requirementText}</span>}
                     </div>
                   </Button>
                 );

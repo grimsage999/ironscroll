@@ -10,8 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Merriweather', 'serif'],
-        headline: ['"Playfair Display"', 'serif'],
+        body: ['VT323', 'monospace'],
+        headline: ['VT323', 'monospace'],
         code: ['monospace'],
       },
       colors: {
