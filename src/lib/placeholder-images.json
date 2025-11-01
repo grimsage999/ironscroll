@@ -3,32 +3,56 @@
     {
       "id": "hamelin-square",
       "description": "The dreary town square of Hamelin in pixel art.",
-      "imageUrl": "https://images.unsplash.com/photo-1599169055013-0027048243b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwaXhlbCUyMGFydCUyMG1lZGlldmFsJTIwdG93bnxlbnwwfHx8fDE3NjE5ODIwODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1651037049239-31cacb33da6b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwaXhlbCUyMGFydCUyMG1lZGlldmFsJTIwdG93bnxlbnwwfHx8fDE3NjE5ODIwODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "pixel art medieval town"
     },
     {
       "id": "tavern-interior",
       "description": "The dimly lit interior of a pixel art medieval tavern.",
-      "imageUrl": "https://images.unsplash.com/photo-1663719720334-4e848b683a22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwaXhlbCUyMGFydCUyMHRhdmVybnxlbnwwfHx8fDE3NjE5ODIwODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1596426778389-6707f9650acf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGl4ZWwlMjBhcnQlMjB0YXZlcm58ZW58MHx8fHwxNzYxOTgyMDg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "pixel art tavern"
     },
     {
       "id": "dusty-archives",
       "description": "Ancient archives filled with scrolls and dusty tomes in pixel art.",
-      "imageUrl": "https://images.unsplash.com/photo-1628076020314-e35739eedfbd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwaXhlbCUyMGFydCUyMGxpYnJhcnl8ZW58MHx8fHwxNzYxOTgyMDg3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1628584732775-6d6836488cb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGl4ZWwlMjBhcnQlMjBsaWJyYXJ5fGVufDB8fHx8MTc2MTk4MjA4N3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "pixel art library"
     },
     {
       "id": "bad-ending",
       "description": "A dark, foreboding pixel art alleyway at night.",
-      "imageUrl": "https://images.unsplash.com/photo-1584616042062-8f069d33c4a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwaXhlbCUyMGFydCUyMGRhcmslMjBhbGxleXxlbnwwfHx8fDE3NjE5ODIwODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1617702591799-0943d1e88bab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwaXhlbCUyMGFydCUyMGRhcmslMjBhbGxleXxlbnwwfHx8fDE3NjE5ODIwODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "pixel art dark alley"
     },
     {
       "id": "good-ending",
       "description": "Sunlight breaking through clouds over a pixel art medieval town.",
-      "imageUrl": "https://images.unsplash.com/photo-1646587630023-835b1c30064a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwaXhlbCUyMGFydCUyMHN1bmxpZ2h0fGVufDB8fHx8MTc2MTk4MjA4OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1753739541581-3a7137e227a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwaXhlbCUyMGFydCUyMHN1bmxpZ2h0fGVufDB8fHx8MTc2MTk4MjA4OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "pixel art sunlight"
+    },
+    {
+      "id": "market-square",
+      "description": "A bustling but tense pixel art market square.",
+      "imageUrl": "https://images.unsplash.com/photo-1662478407443-1190eafa0750?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwaXhlbCUyMGFydCUyMG1lZGlldmFsJTIwbWFya2V0fGVufDB8fHx8MTc2MjAzMTg5NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pixel art medieval market"
+    },
+    {
+      "id": "church-interior",
+      "description": "The solemn, echoing interior of a pixel art church.",
+      "imageUrl": "https://images.unsplash.com/photo-1709029496318-38fed625f402?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwaXhlbCUyMGFydCUyMGNodXJjaCUyMGludGVyaW9yfGVufDB8fHx8MTc2MjAzMTg5NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pixel art church interior"
+    },
+    {
+      "id": "sewer-tunnel",
+      "description": "A dark and damp pixel art sewer tunnel.",
+      "imageUrl": "https://images.unsplash.com/photo-1547223487-c0bbe3535bb7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwaXhlbCUyMGFydCUyMHNld2VyfGVufDB8fHx8MTc2MjAzMTg5NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pixel art sewer"
+    },
+    {
+      "id": "forest-edge",
+      "description": "The edge of a dark, pixel art forest.",
+      "imageUrl": "https://images.unsplash.com/photo-1500171945981-bd5ddaa2ee00?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwaXhlbCUyMGFydCUyMGZvcmVzdCUyMGVkZ2V8ZW58MHx8fHwxNzYyMDMxODk1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pixel art forest edge"
     }
   ]
 }
