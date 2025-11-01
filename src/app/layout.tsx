@@ -21,6 +21,11 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased">
+        <audio autoPlay loop>
+          {/* 8-bit Dungeon by TeknoAXE - Royalty Free */}
+          <source src="https://firebasestudio-hosting.web.app/music/8-bit-dungeon.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
         {children}
         <Toaster />
       </body>

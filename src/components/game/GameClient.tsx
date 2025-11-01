@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useGame } from "@/contexts/GameContext";
@@ -9,10 +10,15 @@ import StatusBar from "./StatusBar";
 import LoadingIndicator from "./LoadingIndicator";
 import { useToast } from "@/hooks/use-toast";
 import type { Choice } from "@/lib/game/types";
+import { useRef } from "react";
 
 export default function GameClient() {
   const { gameState, currentScene, handleChoice, isLoading, setLoading } = useGame();
   const { toast } = useToast();
+  
+  const choiceSoundRef = useRef<HTMLAudioElement>(null);
+  const discoverySoundRef = useRef<HTMLAudioElement>(null);
+
 
   const isChoiceDisabled = (choice: Choice) => {
     const { requires } = choice;
@@ -28,6 +34,13 @@ export default function GameClient() {
   
   const onChoiceClick = async (choice: Choice) => {
     if (isChoiceDisabled(choice)) return;
+
+    if (choice.effects?.piperInsight || choice.effects?.inventoryAdd) {
+      discoverySoundRef.current?.play();
+    } else {
+      choiceSoundRef.current?.play();
+    }
+
     handleChoice(choice);
   };
 
@@ -58,6 +71,8 @@ export default function GameClient() {
 
   return (
     <div className="w-full flex flex-col items-center">
+       <audio ref={choiceSoundRef} src="https://firebasestudio-hosting.web.app/sfx/8-bit-confirm.wav" preload="auto"></audio>
+       <audio ref={discoverySoundRef} src="https://firebasestudio-hosting.web.app/sfx/8-bit-discovery.wav" preload="auto"></audio>
       <StatusBar />
       <Card className="w-full max-w-4xl shadow-lg border-border/30 overflow-hidden bg-black">
         <div className="relative">
