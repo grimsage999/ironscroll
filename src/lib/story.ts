@@ -24,7 +24,7 @@ export const story: Record<string, Scene> = {
     text: "The tavern is a pit of hushed despair. An old man in the corner, nursing his ale, mutters about a strange 'Iron Scroll' the Piper was seen with before he vanished. He claims the mayor has it under lock and key in the town archives. This could be a vital clue.",
     choices: [
       {
-        text: "Thank him and head to the archives.",
+        text: "Trust the old man. Go to the archives.",
         effects: { piperInsight: 1, inventoryAdd: ["Iron Scroll Rumor"] },
         nextScene: "archives_approach",
       },
@@ -151,7 +151,29 @@ export const story: Record<string, Scene> = {
         nextScene: "church_melody"
       },
       {
+        text: "Show the shard to the priest.",
+        requires: { inventory: ["Crystalline Shard"] },
+        nextScene: "church_shard_reveal"
+      },
+      {
         text: "Leave with the shard.",
+        nextScene: "town_square_entry"
+      }
+    ]
+  },
+  church_shard_reveal: {
+    id: "church_shard_reveal",
+    title: "A Fearful Recognition",
+    image: "church-interior",
+    text: "You show the humming shard to the priest. His face drains of color. 'That... that is the Piper's magic. He used similar crystals to focus his melody, to make the very stones of Hamelin resonate with his song. He called it the 'resonant heart' of his instrument.'",
+    choices: [
+      {
+        text: "Where did he focus this energy?",
+        effects: {piperInsight: 2},
+        nextScene: "church_melody"
+      },
+      {
+        text: "Thank him and leave.",
         nextScene: "town_square_entry"
       }
     ]
@@ -160,11 +182,16 @@ export const story: Record<string, Scene> = {
     id: "church_melody",
     title: "A Profane Tune",
     image: "church-interior",
-    text: "'The Piper's music... it wasn't just a song,' the priest whispers, his eyes wide. 'It was a ritual. It resonated with things that should not be disturbed. I heard it echo from the sewers just as much as from the streets.'",
+    text: "'The Piper's music... it wasn't just a song,' the priest whispers, his eyes wide. 'It was a ritual. It resonated with things that should not be disturbed. I heard it echo from the sewers just as much as from the streets. He was obsessed with the town archives, too. Claimed the town's founding documents held a secret about its 'true name.' A dangerous blasphemy!'",
     choices: [
       {
         text: "The sewers seem important. Go there.",
         nextScene: "sewers_entrance"
+      },
+      {
+        text: "Contradictory clues. Head to the archives.",
+        effects: { inventoryAdd: ["Contradictory Scroll Rumor"]},
+        nextScene: "archives_approach"
       },
       {
         text: "Thank the priest and return to the square.",
@@ -193,12 +220,23 @@ export const story: Record<string, Scene> = {
     id: "sewers_explore",
     title: "Below Hamelin",
     image: "sewer-tunnel",
-    text: "The sewers are a labyrinth of filth and echoes. You find dozens of dead rats, all clutching the same sweet herb you found in the market. In the central cistern, you find arcane symbols painted on the walls, still glowing faintly. They match the markings on the Crystalline Shard.",
-    requires: { inventory: ["Crystalline Shard"] },
+    text: "The sewers are a labyrinth of filth and echoes. You find dozens of dead rats, all clutching the same sweet herb you found in the market. In the central cistern, you find arcane symbols painted on the walls, still glowing faintly. They seem to focus the strange energy you've felt.",
     choices: [
       {
-        text: "The symbols are a focus. This is about magic.",
+        text: "The symbols match the shard. This is about magic.",
+        requires: { inventory: ["Crystalline Shard"] },
         effects: { piperInsight: 3, inventoryAdd: ["Sewer Runes Sketch"] },
+        nextScene: "town_square_entry"
+      },
+      {
+        text: "The herb is the key. This is about poison.",
+        requires: { inventory: ["Sweet-Smelling Herb"] },
+        effects: { piperInsight: 1, inventoryAdd: ["Sewer Rat Observation"] },
+        nextScene: "town_square_entry"
+      },
+      {
+        text: "This place is a dead end. Leave.",
+        requires: { notInventory: ["Crystalline Shard", "Sweet-Smelling Herb"]},
         nextScene: "town_square_entry"
       }
     ]
@@ -286,7 +324,23 @@ export const story: Record<string, Scene> = {
   archives_approach: {
     id: "archives_approach",
     title: "The Town Archives",
-    text: "You stand before the heavy oak doors of the town archives. What will you do?",
+    image: "dusty-archives",
+    text: (state) => {
+        let baseText = "You stand before the heavy oak doors of the town archives. ";
+        if (state.inventory.includes("Iron Scroll Rumor") && state.inventory.includes("Contradictory Scroll Rumor")) {
+            return baseText + "The old man in the tavern said the Mayor had the scroll, but the priest claimed the Piper was after the town's founding documents. Who is telling the truth? How will you proceed?";
+        }
+        if (state.inventory.includes("Iron Scroll Rumor")) {
+            return baseText + "The old man in the tavern was convinced the Mayor has the 'Iron Scroll' locked up in here. What will you do?";
+        }
+        if (state.inventory.includes("Contradictory Scroll Rumor")) {
+            return baseText + "The priest seemed certain the Piper was after the town's founding documents to learn its 'true name.' What's your plan?";
+        }
+        if (state.townFavor > 0) {
+            return baseText + "The Mayor has given you permission to enter. The guards nod as you approach.";
+        }
+        return baseText + "The doors are locked, and a guard stands watch. You'll need a good reason to get inside.";
+    },
     choices: [
       {
         text: "Enter with the Mayor's blessing.",
@@ -295,14 +349,13 @@ export const story: Record<string, Scene> = {
       },
       {
         text: "Attempt to sneak in at night.",
-        requires: { notInventory: ["Iron Scroll Rumor"] },
         effects: { piperInsight: 1, townFavor: -1 },
-        nextScene: "archives_sneak_fail",
+        nextScene: "archives_sneak_check",
       },
       {
-        text: "Attempt to sneak in, using your knowledge of the Piper.",
-        requires: { inventory: ["Iron Scroll Rumor"] },
-        effects: { piperInsight: 2 },
+        text: "Bribe the guard.",
+        requires: { townFavor: -1 },
+        effects: { townFavor: 1 },
         nextScene: "archives_search",
       },
       {
@@ -311,15 +364,37 @@ export const story: Record<string, Scene> = {
       },
     ],
   },
+   archives_sneak_check: {
+    id: "archives_sneak_check",
+    title: "Under Cover of Darkness",
+    text: "You wait for nightfall and approach the archives. The guard is gone, but the lock is sturdy. How will you get in?",
+    choices: [
+        {
+            text: "Use the Crystalline Shard to resonate with the lock.",
+            requires: { inventory: ["Crystalline Shard"]},
+            effects: { piperInsight: 2 },
+            nextScene: "archives_search",
+        },
+        {
+            text: "Try to pick the lock.",
+            nextScene: "archives_sneak_fail"
+        }
+    ]
+  },
   archives_search: {
     id: "archives_search",
     title: "Dust and Secrets",
     image: "dusty-archives",
-    text: "Inside, the air is thick with the scent of old paper and forgotten time. After a thorough search, you find it: a heavy, cold scroll of etched iron. It seems ancient, humming with a faint, otherworldly energy.",
+    text: (state) => {
+        if (state.inventory.includes("Contradictory Scroll Rumor")) {
+            return "Following the priest's lead, you ignore the official town records and look for older, forgotten documents. You find a section on pre-founding history and a heavy, cold scroll of etched iron. It seems ancient, humming with a faint, otherworldly energy.";
+        }
+        return "Inside, the air is thick with the scent of old paper and forgotten time. After a thorough search of the official records, you find it: a heavy, cold scroll of etched iron. It seems ancient, humming with a faint, otherworldly energy.";
+    },
     choices: [
       {
-        text: "Examine the scroll's mundane markings.",
-        effects: { piperInsight: 1, inventoryAdd: ["Iron Scroll"] },
+        text: "Examine the scroll's arcane markings.",
+        effects: { piperInsight: 2, inventoryAdd: ["Iron Scroll"] },
         nextScene: "ending_insight",
       }
     ],
@@ -327,6 +402,7 @@ export const story: Record<string, Scene> = {
   archives_sneak_fail: {
     id: "archives_sneak_fail",
     title: "Caught!",
+    image: "bad-ending",
     text: "Your attempt to break in is clumsy. A guard patrol finds you, and you're thrown into a cell for the night. You've lost time and the trust of the town.",
     choices: [{ text: "Wait for the morning.", effects: { townFavor: -3 }, nextScene: "dead_end" }],
   },
@@ -336,7 +412,7 @@ export const story: Record<string, Scene> = {
     image: "bad-ending",
     ending: true,
     text: "Your leads have run dry. The town remains wrapped in its sorrow, and the children's fate is sealed in silence. You have failed Hamelin. You leave the town a day later, the weight of its quiet despair a heavy cloak upon your shoulders.",
-    choices: [{ text: "Start Over", nextScene: "start" }],
+    choices: [{ text: "Start Over", variant: "destructive", nextScene: "start" }],
   },
   dead_end_forest: {
     id: "dead_end_forest",
@@ -344,7 +420,7 @@ export const story: Record<string, Scene> = {
     image: "bad-ending",
     ending: true,
     text: "You follow the trail of toys deep into the woods. The faint music grows stronger, a sweet, cloying melody that muddles your thoughts. You lose your way, wandering in circles, another lost soul claimed by the Piper's unending song.",
-    choices: [{ text: "Start Over", nextScene: "start" }],
+    choices: [{ text: "Start Over", variant: "destructive", nextScene: "start" }],
   },
   ending_insight: {
     id: "ending_insight",
