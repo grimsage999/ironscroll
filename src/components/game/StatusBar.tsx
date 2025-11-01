@@ -1,8 +1,8 @@
 "use client";
 
 import { useGame } from "@/contexts/GameContext";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Heart, BrainCircuit, Scroll } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Heart, Music, Scroll } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 export default function StatusBar() {
@@ -34,7 +34,7 @@ export default function StatusBar() {
                     <TooltipTrigger asChild>
                         <div className="flex flex-col items-center gap-1">
                             <div className="flex items-center gap-2">
-                                <BrainCircuit className="w-5 h-5 text-primary" />
+                                <Music className="w-5 h-5 text-primary" />
                                 <span className="font-bold text-lg">{gameState.piperInsight}</span>
                             </div>
                             <p className="text-xs text-muted-foreground">Piper Insight</p>

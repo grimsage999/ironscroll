@@ -31,6 +31,27 @@ export default function GameClient() {
     handleChoice(choice);
   };
 
+  const getRequirementText = (choice: Choice) => {
+    if (!choice.requires) return null;
+
+    const requirements = [];
+    if (choice.requires.townFavor) {
+      requirements.push(`Favor: ${choice.requires.townFavor}`);
+    }
+    if (choice.requires.piperInsight) {
+      requirements.push(`Insight: ${choice.requires.piperInsight}`);
+    }
+    if (choice.requires.inventory) {
+      requirements.push(`Needs: ${choice.requires.inventory.join(', ').replace(/_/g, ' ')}`);
+    }
+     if (choice.requires.notInventory) {
+      requirements.push(`Must not have: ${choice.requires.notInventory.join(', ').replace(/_/g, ' ')}`);
+    }
+
+    if (requirements.length === 0) return null;
+
+    return `[${requirements.join(' | ')}]`;
+  }
 
   const sceneImage = PlaceHolderImages.find(img => img.id === currentScene.image);
   const textContent = typeof currentScene.text === 'function' ? currentScene.text(gameState) : currentScene.text;
@@ -69,16 +90,20 @@ export default function GameClient() {
             <div className="flex flex-col sm:flex-row gap-4 w-full">
               {currentScene.choices.map((choice, index) => {
                 const disabled = isChoiceDisabled(choice);
+                const requirementText = getRequirementText(choice);
                 return (
                   <Button
                     key={index}
                     onClick={() => onChoiceClick(choice)}
-                    className="w-full transition-all duration-300 transform hover:scale-105"
+                    className="w-full transition-all duration-300 transform hover:scale-105 h-auto py-3"
                     variant={choice.variant || (choice.nextScene === 'start' ? 'destructive' : 'default')}
                     disabled={disabled}
                     aria-disabled={disabled}
                   >
-                    {choice.text}
+                    <div className="flex flex-col">
+                      <span>{choice.text}</span>
+                      {requirementText && <span className="text-xs opacity-70 font-normal">{requirementText}</span>}
+                    </div>
                   </Button>
                 );
               })}
