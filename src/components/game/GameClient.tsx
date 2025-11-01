@@ -7,12 +7,11 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Image from "next/image";
 import StatusBar from "./StatusBar";
 import LoadingIndicator from "./LoadingIndicator";
-import { generateCrypticProphecy } from "@/ai/flows/generate-cryptic-prophecy";
 import { useToast } from "@/hooks/use-toast";
 import type { Choice } from "@/lib/game/types";
 
 export default function GameClient() {
-  const { gameState, currentScene, handleChoice, isLoading, setLoading, setProphecy } = useGame();
+  const { gameState, currentScene, handleChoice, isLoading, setLoading } = useGame();
   const { toast } = useToast();
 
   const isChoiceDisabled = (choice: Choice) => {
@@ -29,29 +28,7 @@ export default function GameClient() {
   
   const onChoiceClick = async (choice: Choice) => {
     if (isChoiceDisabled(choice)) return;
-
-    if (choice.action === 'generateProphecy') {
-      setLoading(true);
-      try {
-        const result = await generateCrypticProphecy({
-          scrollDescription: 'An ancient iron scroll, covered in faint, swirling etchings that seem to shift when not directly observed.',
-          playerContext: 'In the dusty town archives, the player is holding the newly discovered Iron Scroll, sensing its latent power.'
-        });
-        setProphecy(result.prophecy);
-        handleChoice(choice);
-      } catch (error) {
-        console.error("Error generating prophecy:", error);
-        toast({
-          title: "Error",
-          description: "The arcane energies are unstable. Please try again.",
-          variant: "destructive",
-        });
-      } finally {
-        setLoading(false);
-      }
-    } else {
-      handleChoice(choice);
-    }
+    handleChoice(choice);
   };
 
 

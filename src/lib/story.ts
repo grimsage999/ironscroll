@@ -112,12 +112,7 @@ export const story: Record<string, Scene> = {
         text: "Examine the scroll's mundane markings.",
         effects: { piperInsight: 1, inventoryAdd: ["Iron Scroll"] },
         nextScene: "ending_insight",
-      },
-      {
-        text: "Consult the arcane texts about its nature.",
-        action: "generateProphecy",
-        nextScene: "prophecy_revealed",
-      },
+      }
     ],
   },
   prophecy_revealed: {

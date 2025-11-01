@@ -27,11 +27,6 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
   const [isLoading, setLoading] = useState(false);
 
   const handleChoice = useCallback((choice: Choice) => {
-    if (choice.action === 'generateProphecy') {
-        // AI action is handled in GameClient
-        return;
-    }
-
     setGameState((prevState) => {
       // Reset to initial state if the choice leads to the start
       if (choice.nextScene === 'start') {
