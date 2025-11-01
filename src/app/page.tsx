@@ -1,3 +1,4 @@
+
 import GameClient from "@/components/game/GameClient";
 import { GameProvider } from "@/contexts/GameContext";
 import { Card, CardContent } from "@/components/ui/card";

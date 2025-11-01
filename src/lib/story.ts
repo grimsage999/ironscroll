@@ -1,3 +1,4 @@
+
 import type { Scene } from "@/lib/game/types";
 
 export const story: Record<string, Scene> = {
@@ -298,6 +299,7 @@ export const story: Record<string, Scene> = {
   mayor_accepts: {
     id: "mayor_accepts",
     title: "A Fragile Alliance",
+    image: "dusty-archives",
     text: "Mayor Wilhelm, desperate for any aid, accepts your offer. 'Anything,' he pleads, 'Anything to bring our children back.' He grants you access to the town's records and archives, hoping you might find a clue his men have missed.",
     choices: [
       {
@@ -313,6 +315,7 @@ export const story: Record<string, Scene> = {
   mayor_rejects: {
     id: "mayor_rejects",
     title: "An Unwelcome Voice",
+    image: "bad-ending",
     text: "Your words stir unrest among the small crowd. The Mayor's face hardens. 'We have no time for doubters and rabble-rousers!' he barks. You've made an enemy of him, and official channels are now closed to you.",
     choices: [
       {
@@ -424,18 +427,10 @@ export const story: Record<string, Scene> = {
   },
   ending_insight: {
     id: "ending_insight",
-    title: "A Glimmer of Hope",
+    title: "A Terrible Truth",
     image: "good-ending",
     ending: true,
-    text: "Though you don't grasp its full power, you have found a crucial piece of the puzzle. You now have a direction, a lead to follow that might take you to the Piper's lair. You've given Hamelin a chance to reclaim its future.",
-    choices: [{ text: "Start Over", nextScene: "start" }],
-  },
-  ending_prophecy: {
-    id: "ending_prophecy",
-    title: "Echoes of the Future",
-    image: "good-ending",
-    ending: true,
-    text: "The prophecy illuminates the path forward. You understand a deeper truth about the Piper's magic. You now know not only where he might be, but have a clue as to how to defeat him. The fate of Hamelin's children rests in your hands, but for the first time, victory seems possible.",
+    text: "You have pieced together the Piper's plan and found the path to his lair. You understand the arcane forces at play. But in your focus on the mythos, the children themselves slipped away. You have the truth, but Hamelin has lost its future. It is a bitter victory.",
     choices: [{ text: "Start Over", nextScene: "start" }],
   },
 };
