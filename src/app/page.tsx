@@ -8,6 +8,10 @@ export default function Home() {
   return (
     <GameProvider>
       <div className="flex flex-col min-h-screen">
+        <audio autoPlay loop>
+          <source src="/music/medieval-fantasy.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
         <header className="p-4 border-b border-border/50">
           <div className="container mx-auto flex justify-between items-center">
             <h1 className="font-headline text-2xl text-primary">Hamelin's Echo</h1>

@@ -59,23 +59,25 @@ export default function GameClient() {
   return (
     <div className="w-full flex flex-col items-center">
       <StatusBar />
-      <Card className="w-full max-w-4xl shadow-lg border-border/30">
-        {sceneImage && (
-          <div className="relative aspect-video w-full">
-            <Image
-              src={sceneImage.imageUrl}
-              alt={currentScene.title}
-              fill
-              className="object-cover rounded-t-lg"
-              data-ai-hint={sceneImage.imageHint}
-              priority
-            />
+      <Card className="w-full max-w-4xl shadow-lg border-border/30 overflow-hidden">
+        <div className="relative">
+          {sceneImage && (
+            <div className="relative aspect-video w-full">
+              <Image
+                src={sceneImage.imageUrl}
+                alt={currentScene.title}
+                fill
+                className="object-cover"
+                data-ai-hint={sceneImage.imageHint}
+                priority
+              />
              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-          </div>
-        )}
-        <CardHeader className={sceneImage ? "absolute bottom-0 text-white" : ""}>
-          <CardTitle className="font-headline text-3xl md:text-4xl">{currentScene.title}</CardTitle>
-        </CardHeader>
+            </div>
+          )}
+           <CardHeader className={sceneImage ? "absolute bottom-0 text-white" : ""}>
+            <CardTitle className="font-headline text-3xl md:text-4xl">{currentScene.title}</CardTitle>
+          </CardHeader>
+        </div>
         <CardContent className="p-6">
           <div className="prose prose-invert max-w-none text-foreground/90 leading-relaxed">
             {textContent.split('\n').map((paragraph, index) => (
