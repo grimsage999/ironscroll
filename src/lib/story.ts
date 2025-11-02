@@ -25,12 +25,13 @@ export const story: Record<string, Scene> = {
     text: "The tavern is a pit of hushed despair, thick with the sour smell of stale ale. An old man in the corner, his face a roadmap of worries, mutters into his cup. 'It's the Whispering Plague come again,' he rasps. 'Same as a generation ago. The music comes, and the wicked are culled. The Piper... he's no man. He's a reckoning.' He talks of an 'Iron Scroll' the Mayor keeps locked away, a relic from the first founding that holds the town's 'true name' and its only protection.",
     choices: [
       {
-        text: "Trust the old man. Go to the archives.",
+        text: "Listen to his tale. Go to the archives.",
         effects: { piperInsight: 1, inventoryAdd: ["Iron Scroll Rumor"] },
         nextScene: "archives_approach",
       },
       {
-        text: "Dismiss it as superstitious rambling and go to the town square.",
+        text: "Ignore him and go to the town square.",
+        effects: { townFavor: -1 },
         nextScene: "town_square_entry",
       },
     ],
