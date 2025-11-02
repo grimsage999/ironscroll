@@ -7,22 +7,10 @@
       "imageHint": "pixel art children"
     },
     {
-      "id": "hamelin-townsfolk",
-      "description": "The worried and desperate townsfolk of Hamelin in a dreary street.",
-      "imageUrl": "https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/2.png",
-      "imageHint": "pixel art townsfolk"
-    },
-    {
-      "id": "iron-scroll-archives",
-      "description": "The mystical Iron Scroll hovering in the dusty town archives.",
-      "imageUrl": "https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/3.png",
-      "imageHint": "pixel art scroll"
-    },
-    {
-      "id": "piper-sprite",
-      "description": "A mysterious masked piper with glowing blue eyes, holding a pipe.",
-      "imageUrl": "https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/4.png",
-      "imageHint": "pixel art piper"
+      "id": "tavern-interior-player",
+      "description": "The traveler entering the Weary Wanderer tavern.",
+      "imageUrl": "https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/6.png",
+      "imageHint": "pixel art tavern"
     },
     {
       "id": "tavern-old-man",
@@ -31,20 +19,26 @@
       "imageHint": "pixel art old man"
     },
     {
-      "id": "tavern-interior-player",
-      "description": "The traveler entering the Weary Wanderer tavern.",
-      "imageUrl": "https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/6.png",
-      "imageHint": "pixel art tavern"
+      "id": "hamelin-townsfolk",
+      "description": "The worried and desperate townsfolk of Hamelin in a dreary street.",
+      "imageUrl": "https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/2.png",
+      "imageHint": "pixel art townsfolk"
     },
     {
-      "id": "hamelin-guards",
-      "description": "The grim-faced guards of Hamelin on patrol.",
-      "imageUrl": "https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/7.png",
-      "imageHint": "pixel art guards"
+      "id": "hamelin-square-far",
+      "description": "A far away shot of the town of Hamelin.",
+      "imageUrl": "https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/10.png",
+      "imageHint": "pixel art town"
     },
     {
-      "id": "bridge-of-pipes",
-      "description": "A stone bridge over a river with discarded pipes floating in it, representing the lost children.",
+      "id": "market-square",
+      "description": "A bustling but tense pixel art market square.",
+      "imageUrl": "https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/market-square.png",
+      "imageHint": "pixel art market"
+    },
+    {
+      "id": "bridge-to-forest",
+      "description": "A stone bridge over a river with discarded pipes floating in it.",
       "imageUrl": "https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/8.png",
       "imageHint": "pixel art bridge"
     },
@@ -55,10 +49,10 @@
       "imageHint": "pixel art forest"
     },
     {
-      "id": "hamelin-square-far",
-      "description": "A far away shot of the town of Hamelin.",
-      "imageUrl": "https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/10.png",
-      "imageHint": "pixel art town"
+      "id": "iron-scroll-archives",
+      "description": "The mystical Iron Scroll hovering in the dusty town archives.",
+      "imageUrl": "https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/3.png",
+      "imageHint": "pixel art scroll"
     },
     {
       "id": "bad-ending",
@@ -67,16 +61,22 @@
       "imageHint": "pixel art dark alley"
     },
     {
+      "id": "hamelin-guards",
+      "description": "The grim-faced guards of Hamelin on patrol.",
+      "imageUrl": "https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/7.png",
+      "imageHint": "pixel art guards"
+    },
+    {
+      "id": "piper-sprite",
+      "description": "A mysterious masked piper with glowing blue eyes, holding a pipe.",
+      "imageUrl": "https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/4.png",
+      "imageHint": "pixel art piper"
+    },
+    {
       "id": "good-ending",
       "description": "Sunlight breaking through clouds over a pixel art medieval town.",
       "imageUrl": "https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/good-ending.png",
       "imageHint": "pixel art sunlight"
-    },
-    {
-      "id": "market-square",
-      "description": "A bustling but tense pixel art market square.",
-      "imageUrl": "https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/market-square.png",
-      "imageHint": "pixel art market"
     }
   ]
 }

@@ -66,7 +66,7 @@ export default function GameClient() {
     return `[${requirements.join(' | ')}]`;
   }
 
-  const sceneImage = PlaceHolderImages.find(img => img.id === currentScene.image);
+  const sceneImage = currentScene.image ? PlaceHolderImages.find(img => img.id === currentScene.image) : undefined;
   const textContent = typeof currentScene.text === 'function' ? currentScene.text(gameState) : currentScene.text;
 
   return (
@@ -75,7 +75,7 @@ export default function GameClient() {
        <audio ref={discoverySoundRef} src="https://firebasestudio-hosting.web.app/sfx/8-bit-discovery.wav" preload="auto"></audio>
       <StatusBar />
       <Card className="w-full max-w-4xl shadow-lg border-border/30 overflow-hidden bg-black">
-        <div className="relative">
+        <div className="relative bg-black">
           {sceneImage && sceneImage.imageUrl && (
             <div className="relative aspect-video w-full">
               <Image
