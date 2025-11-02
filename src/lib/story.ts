@@ -1,4 +1,3 @@
-
 import type { Scene } from "@/lib/game/types";
 
 export const story: Record<string, Scene> = {
