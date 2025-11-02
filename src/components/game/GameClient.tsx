@@ -76,7 +76,7 @@ export default function GameClient() {
       <StatusBar />
       <Card className="w-full max-w-4xl shadow-lg border-border/30 overflow-hidden bg-black">
         <div className="relative">
-          {sceneImage && (
+          {sceneImage && sceneImage.imageUrl && (
             <div className="relative aspect-video w-full">
               <Image
                 src={sceneImage.imageUrl}
