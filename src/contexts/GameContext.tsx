@@ -32,6 +32,12 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
       if (choice.nextScene === 'start') {
         return initialGameState;
       }
+      
+      const nextSceneExists = !!story[choice.nextScene];
+      if (!nextSceneExists) {
+        console.error(`Error: Scene "${choice.nextScene}" not found. Returning to start.`);
+        return initialGameState;
+      }
 
       const newInventory = [...(prevState.inventory || [])];
       choice.effects?.inventoryAdd?.forEach(item => {

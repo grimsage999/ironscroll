@@ -75,13 +75,13 @@ export default function GameClient() {
 
   return (
     <div className="w-full flex flex-col items-center">
-       <audio ref={choiceSoundRef} src="https://firebasestudio-hosting.web.app/sfx/8-bit-confirm.wav" preload="auto"></audio>
-       <audio ref={discoverySoundRef} src="https://firebasestudio-hosting.web.app/sfx/8-bit-discovery.wav" preload="auto"></audio>
+       <audio ref={choiceSoundRef} src="https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/sfx/8-bit-confirm.wav" preload="auto"></audio>
+       <audio ref={discoverySoundRef} src="https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/sfx/8-bit-discovery.wav" preload="auto"></audio>
       <StatusBar />
       <Card className="w-full max-w-4xl shadow-lg border-border/30 overflow-hidden bg-black">
         <div className="relative bg-black">
           {sceneImage?.imageUrl && (
-            <div className="relative aspect-video w-full">
+            <div className="relative aspect-video w-full bg-black/50">
               <Image
                 src={sceneImage.imageUrl}
                 alt={currentScene.title}

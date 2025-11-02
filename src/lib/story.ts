@@ -176,6 +176,7 @@ export const story: Record<string, Scene> = {
   church: {
     id: "church",
     title: "The House of Silence",
+    image: "church",
     text: "The church is cold and empty, save for a frantic priest. Dust motes dance in the light from the stained-glass windows. On a lectern, a pile of hastily printed pamphlets. 'He sabotaged it!' the priest cries, pointing at the bell tower. 'The Warding Bell! For generations, it has been rung on the Day of Warding to keep the old evils at bay. But he severed the rope with... with his magic. A crystalline shard! The profane melody is a mockery of our most sacred ritual!'",
     choices: [
       {
@@ -196,6 +197,7 @@ export const story: Record<string, Scene> = {
   church_pamphlet: {
     id: "church_pamphlet",
     title: "A Dire Warning",
+    image: "church",
     text: "The pamphlet is titled 'The Whispering Plague: A Sinner's Scourge'. It claims the Piper is a divine punishment for Hamelin's slide into greed and secularism. It calls for fasting and prayer, insisting that only piety can save the town. It ends with a chilling line: 'The Piper's song finds purchase only in the corrupted soul.'",
     choices: [
       {
@@ -213,6 +215,7 @@ export const story: Record<string, Scene> = {
   church_clue: {
     id: "church_clue",
     title: "A Resonant Clue",
+    image: "church",
     text: "You climb the dusty steps to the bell tower. Near the severed bell rope, you find a shimmering crystalline shard. It hums faintly in your hand, vibrating at a frequency you can feel in your teeth. This was no ordinary act of vandalism; it was a targeted, ritualistic act.",
     choices: [
       {
@@ -234,6 +237,7 @@ export const story: Record<string, Scene> = {
   church_shard_reveal: {
     id: "church_shard_reveal",
     title: "A Fearful Recognition",
+    image: "church",
     text: "You show the humming shard to the priest. His face drains of color. 'That... that is the Piper's magic. He uses them to focus his melody, to make the very stones of Hamelin resonate. He called it the 'resonant heart' of his instrument. He's turning our own town against us.'",
     choices: [
       {
@@ -250,6 +254,7 @@ export const story: Record<string, Scene> = {
   church_melody: {
     id: "church_melody",
     title: "A Profane Tune",
+    image: "church",
     text: "'The Piper's music... it's a ritual,' the priest whispers, his eyes wide. 'It resonates with things that should not be disturbed. I heard it echo from the sewers, a dark counterpoint to the hymns. He was obsessed with the archives, too. Claimed our founding documents held the secret to the town's 'true name.' A blasphemy against Hamelin's history!'",
     choices: [
       {
@@ -270,6 +275,7 @@ export const story: Record<string, Scene> = {
   sewers_entrance: {
     id: "sewers_entrance",
     title: "The Gaping Maw",
+    image: "sewers",
     text: "You find a sewer grate slightly ajar in a forgotten, refuse-strewn alley. A foul stench wafts out, mingling with the sickly-sweet scent of the strange herb. You can also hear a faint, rhythmic dripping and something else... a low hum, similar to the shard from the church.",
     choices: [
       {
@@ -286,6 +292,7 @@ export const story: Record<string, Scene> = {
   sewers_explore: {
     id: "sewers_explore",
     title: "Below Hamelin",
+    image: "sewers",
     text: "The sewers are a labyrinth of filth and echoes. You find dozens of dead rats, all clutching the same sweet herb you found in the market. In the central cistern, you find arcane symbols painted on the walls, still glowing faintly. They seem to focus the strange energy you've felt, channeling it through the town's foundations.",
     choices: [
       {
@@ -500,7 +507,7 @@ export const story: Record<string, Scene> = {
     id: "archives_sneak_fail",
     title: "Caught!",
     image: "hamelin-guards",
-    text: "Your attempt to break in is clumsy and loud. A guard patrol rounds the corner, lantern held high. 'Hold it right there, skulker!' one of them shouts. They corner you against the archives door.",
+    text: "Your attempt to break in is clumsy and loud. A patrol rounds the corner, lantern held high. 'Hold it right there, skulker!' one of them shouts. They corner you against the archives door.",
     choices: [
       {
         text: "Try to bribe them.",

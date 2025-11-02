@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className="font-body antialiased">
         <audio autoPlay loop>
           {/* 8-bit Dungeon by TeknoAXE - Royalty Free */}
-          <source src="https://firebasestudio-hosting.web.app/music/teknoaxe-8bit-dungeon.mp3" type="audio/mpeg" />
+          <source src="https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/teknoaxe-8bit-dungeon.mp3" type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>
         {children}

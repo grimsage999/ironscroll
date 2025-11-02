@@ -77,6 +77,18 @@
       "description": "Sunlight breaking through clouds over a pixel art medieval town.",
       "imageUrl": "https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/good-ending.png",
       "imageHint": "pixel art sunlight"
+    },
+    {
+      "id": "church",
+      "description": "A cold, empty church with stained-glass windows.",
+      "imageUrl": "https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/church.png",
+      "imageHint": "pixel art church"
+    },
+    {
+      "id": "sewers",
+      "description": "A dark, disgusting sewer with arcane symbols on the wall.",
+      "imageUrl": "https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/sewers.png",
+      "imageHint": "pixel art sewers"
     }
   ]
 }
