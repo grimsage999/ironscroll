@@ -1,4 +1,4 @@
 import type { ImagePlaceholder } from '@/lib/game/types';
-import data from './placeholder-images.json';
+import { placeholderImages } from './placeholder-images.json';
 
-export const PlaceHolderImages: ImagePlaceholder[] = data.placeholderImages;
+export const PlaceHolderImages: ImagePlaceholder[] = placeholderImages;
