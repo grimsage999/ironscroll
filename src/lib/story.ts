@@ -75,8 +75,8 @@ export const story: Record<string, Scene> = {
         nextScene: "church",
       },
       {
-        text: "Explore the outskirts of the forest.",
-        nextScene: "forest_outskirts",
+        text: "Leave town towards the forest.",
+        nextScene: "bridge_to_forest",
       }
     ],
   },
@@ -307,9 +307,26 @@ export const story: Record<string, Scene> = {
       }
     ]
   },
+  bridge_to_forest: {
+    id: "bridge_to_forest",
+    title: "The Piper's Toll",
+    image: "bridge-of-pipes",
+    text: "You leave the oppressive quiet of the town square and walk towards the edge of town. The path to the forest leads over a stone bridge. The river below is sluggish, and something catches your eye. Dozens of small, simple pipes—like the kind children make—float on the surface, a silent, heartbreaking tribute to the lost.",
+    choices: [
+      {
+        text: "Follow the path into the Whispering Woods.",
+        nextScene: "forest_outskirts"
+      },
+      {
+        text: "Turn back. The sight is too much to bear.",
+        nextScene: "town_square_entry"
+      }
+    ]
+  },
   forest_outskirts: {
     id: "forest_outskirts",
     title: "The Whispering Woods",
+    image: "forest-edge",
     text: "The forest that borders Hamelin is unnaturally silent. You find a series of small, discarded wooden toys, leading a path into the woods. A lone huntsman warns you to turn back. 'That's the Gloomwood,' he says. 'Full of old magic. It sings a song that you can't stop following, especially if you're not right with the world.'",
     choices: [
       {
@@ -330,6 +347,7 @@ export const story: Record<string, Scene> = {
   forest_clue: {
     id: "forest_clue",
     title: "A Child's Trail",
+    image: "forest-edge",
     text: "You pick up one of the toys, a crudely carved wooden horse. It feels cold to the touch, and for a moment, you think you can hear a faint, childlike giggle on the wind. The trail of toys leads deeper into the oppressive woods.",
     choices: [
       {
@@ -345,6 +363,7 @@ export const story: Record<string, Scene> = {
   forest_path: {
     id: "forest_path",
     title: "The Singing Path",
+    image: "forest-edge",
     text: "'It's not a sound, it's a feeling,' the huntsman says, not meeting your eyes. 'Pulls at your soul. The Piper walked that path, and the forest has held his tune ever since. The children followed it, I'm sure of it.' He points to a barely-visible trail marked by a gnarled, ancient tree.",
     choices: [
       {
