@@ -527,7 +527,7 @@ export const story: Record<string, Scene> = {
   confrontation: {
     id: "confrontation",
     title: "The Confrontation",
-    image: "forest-edge",
+    image: "piper-sprite",
     text: (state) => {
       // Find the Iron Scroll! It's not in the archives.
       if (state.inventory.includes("Priest's Diary Page")) {
@@ -556,7 +556,7 @@ export const story: Record<string, Scene> = {
   ending_final_choice: {
     id: "ending_final_choice",
     title: "Face the Piper",
-    image: "forest-edge",
+    image: "piper-sprite",
     text: "You follow the path into the woods, the Piper's song growing stronger until it's a physical presence. You arrive in a clearing to see the Piper, his back to you, playing his melody to the lost children of Hamelin who dance in a trance. What you do next will decide everything.",
     choices: [
       {
