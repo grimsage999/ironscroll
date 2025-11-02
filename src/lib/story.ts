@@ -310,7 +310,7 @@ export const story: Record<string, Scene> = {
   bridge_to_forest: {
     id: "bridge_to_forest",
     title: "The Piper's Toll",
-    image: "bridge-of-pipes",
+    image: "bridge-to-forest",
     text: "You leave the oppressive quiet of the town square and walk towards the edge of town. The path to the forest leads over a stone bridge. The river below is sluggish, and something catches your eye. Dozens of small, simple pipes—like the kind children make—float on the surface, a silent, heartbreaking tribute to the lost.",
     choices: [
       {
@@ -628,3 +628,5 @@ export const story: Record<string, Scene> = {
     choices: [{ text: "Play Again", nextScene: "start" }],
   },
 }
+
+    
