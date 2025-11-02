@@ -39,13 +39,17 @@ export const story: Record<string, Scene> = {
     id: "town_square_entry",
     title: "The Heart of Hamelin",
     image: "hamelin-square",
-    text: "You step into the town square, surrounded by timber-framed houses leaning against each other. Mayor Wilhelm is trying to rally the few people present, his face a mask of strained authority. The air is thick with fear and suspicion. From here, you can see the bustling market, the solemn church, and the alley leading to the tavern.",
+    text: "You step into the town square, surrounded by timber-framed houses leaning against each other. Mayor Wilhelm is trying to rally the few people present, his face a mask of strained authority. The air is thick with fear and suspicion. A crude 'WANTED' poster is nailed to a nearby post. From here, you can see the bustling market, the solemn church, and the alley leading to the tavern.",
     choices: [
       {
         text: "Approach Mayor Wilhelm.",
         nextScene: "town_square_mayor",
       },
       {
+        text: "Examine the wanted poster.",
+        nextScene: "town_square_poster",
+      },
+       {
         text: "Go to the marketplace.",
         nextScene: "market",
       },
@@ -58,6 +62,23 @@ export const story: Record<string, Scene> = {
         nextScene: "forest_outskirts",
       }
     ],
+  },
+  town_square_poster: {
+    id: "town_square_poster",
+    title: "Official Decree",
+    image: "hamelin-square",
+    text: "You tear the poster from the post. It's a crude sketch of a man in flamboyant clothes, a pipe in hand. The text, signed by Mayor Wilhelm, offers a meager reward for the capture of a 'charlatan and kidnapper' known only as The Piper. It makes no mention of magic, plagues, or any strange phenomena, framing the tragedy as a simple, non-magical crime.",
+    choices: [
+      {
+        text: "A simple crime? Seems unlikely. Pocket the poster.",
+        effects: { inventoryAdd: ["Wanted Poster"] },
+        nextScene: "town_square_entry"
+      },
+      {
+        text: "This is just propaganda. Leave it.",
+        nextScene: "town_square_entry"
+      }
+    ]
   },
   town_square_mayor: {
     id: "town_square_mayor",
@@ -85,12 +106,12 @@ export const story: Record<string, Scene> = {
     id: "market",
     title: "The Silent Market",
     image: "market-square",
-    text: "The market is unusually quiet, the colorful stalls starkly contrasting the somber mood. A merchant whispers that a few days before the children vanished, all the rats in town were found dead in the sewers, each with a strange, sweet-smelling herb in its mouth. 'Just like the stories of the Whispering Plague,' she mutters. You notice a discarded pouch on the ground, nearly hidden beneath a stall.",
+    text: "The market is unusually quiet. A traveling puppeteer puts on a grim show for an audience of none, his wooden puppets enacting a tale of a demonic Piper stealing naughty children. Nearby, a merchant whispers that a few days before the children vanished, all the rats in town were found dead in the sewers, each with a strange, sweet-smelling herb in its mouth. 'Just like the stories of the Whispering Plague,' she mutters.",
     choices: [
       {
-        text: "Investigate the pouch.",
-        effects: { piperInsight: 1, inventoryAdd: ["Sweet-Smelling Herb"] },
-        nextScene: "market_clue",
+        text: "Watch the puppet show.",
+        effects: { piperInsight: 1 },
+        nextScene: "market_puppet_show",
       },
       {
         text: "Ask the merchant about the sewers.",
@@ -100,6 +121,23 @@ export const story: Record<string, Scene> = {
         text: "Return to the town square.",
         nextScene: "town_square_entry",
       }
+    ]
+  },
+  market_puppet_show: {
+    id: "market_puppet_show",
+    title: "The Wooden Piper",
+    image: "market-square",
+    text: "The puppet show is a grotesque exaggeration, depicting the Piper as a horned devil with a flute that breathes green fire. The children in the story are mischievous brats who get their just deserts. It's a morality play meant to scare and to blame. It tells you more about the town's fear than about the Piper himself. As the show ends, you notice a discarded pouch on the ground.",
+    choices: [
+      {
+        text: "Investigate the pouch.",
+        effects: { piperInsight: 1, inventoryAdd: ["Sweet-Smelling Herb"] },
+        nextScene: "market_clue",
+      },
+      {
+        text: "The show was useless. Return to the square.",
+        nextScene: "town_square_entry",
+      },
     ]
   },
   market_clue: {
@@ -122,7 +160,7 @@ export const story: Record<string, Scene> = {
     id: "church",
     title: "The House of Silence",
     image: "church-interior",
-    text: "The church is cold and empty, save for a frantic priest. Dust motes dance in the light from the stained-glass windows. 'He sabotaged it!' the priest cries, pointing at the bell tower. 'The Warding Bell! For generations, it has been rung on the Day of Warding to keep the old evils at bay. But he severed the rope with... with his magic. A crystalline shard! The profane melody is a mockery of our most sacred ritual!'",
+    text: "The church is cold and empty, save for a frantic priest. Dust motes dance in the light from the stained-glass windows. On a lectern, a pile of hastily printed pamphlets. 'He sabotaged it!' the priest cries, pointing at the bell tower. 'The Warding Bell! For generations, it has been rung on the Day of Warding to keep the old evils at bay. But he severed the rope with... with his magic. A crystalline shard! The profane melody is a mockery of our most sacred ritual!'",
     choices: [
       {
         text: "Examine the bell tower.",
@@ -130,14 +168,31 @@ export const story: Record<string, Scene> = {
         nextScene: "church_clue"
       },
       {
-        text: "Ask about the Day of Warding.",
-        effects: { piperInsight: 2 },
-        nextScene: "church_melody"
+        text: "Read one of the pamphlets.",
+        nextScene: "church_pamphlet",
       },
       {
         text: "Return to the town square.",
         nextScene: "town_square_entry"
       }
+    ]
+  },
+  church_pamphlet: {
+    id: "church_pamphlet",
+    title: "A Dire Warning",
+    image: "church-interior",
+    text: "The pamphlet is titled 'The Whispering Plague: A Sinner's Scourge'. It claims the Piper is a divine punishment for Hamelin's slide into greed and secularism. It calls for fasting and prayer, insisting that only piety can save the town. It ends with a chilling line: 'The Piper's song finds purchase only in the corrupted soul.'",
+    choices: [
+      {
+        text: "This is religious hysteria. Still, keep one.",
+        effects: { inventoryAdd: ["Religious Pamphlet"] },
+        nextScene: "church",
+      },
+      {
+        text: "Ask the priest about the Day of Warding instead.",
+        effects: { piperInsight: 2 },
+        nextScene: "church_melody"
+      },
     ]
   },
   church_clue: {
@@ -391,17 +446,29 @@ export const story: Record<string, Scene> = {
     image: "dusty-archives",
     text: (state) => {
         if (state.inventory.includes("Contradictory Scroll Rumor")) {
-            return "Following the priest's lead, you ignore the official town records and look for older, pre-founding documents. Tucked away in a dusty corner, you find it: a heavy, cold scroll of etched iron. It seems ancient, humming with a faint, otherworldly energy.";
+            return "Following the priest's lead, you ignore the official town records and look for older, pre-founding documents. You find a section on previous 'visitations' and a reference to the diary of the town's first priest.";
         }
-        return "Inside, the air is thick with the scent of old paper. Following the tavern gossip, you search the Mayor's official records. You find it: a heavy, cold scroll of etched iron, hidden amongst land deeds. It seems ancient, humming with a faint, otherworldly energy.";
+        return "Inside, the air is thick with the scent of old paper. Following the tavern gossip, you search the Mayor's official records. It's mostly land deeds and tax logs, but you find a hidden compartment containing the diary of a former mayor.";
     },
     choices: [
       {
-        text: "Examine the scroll's arcane markings.",
-        effects: { piperInsight: 2, inventoryAdd: ["Iron Scroll"] },
-        nextScene: "confrontation",
+        text: "Read the diary.",
+        nextScene: "archives_diary",
       }
     ],
+  },
+  archives_diary: {
+    id: "archives_diary",
+    title: "An Old Account",
+    image: "dusty-archives",
+    text: "The diary is brittle with age. It describes a nearly identical event from a generation ago—a 'Piper' with a hypnotic melody, and the disappearance of the town's 'sinful'. The writer mentions hiding the town's true protection, an 'Iron Scroll', not in the official records, but within the church, 'under the gaze of the founders,' believing the mayor of his time to be corrupt.",
+    choices: [
+        {
+            text: "The scroll is in the church! Take the diary page.",
+            effects: { piperInsight: 3, inventoryAdd: ["Priest's Diary Page"]},
+            nextScene: "town_square_entry"
+        }
+    ]
   },
   archives_sneak_fail: {
     id: "archives_sneak_fail",
@@ -471,6 +538,15 @@ export const story: Record<string, Scene> = {
     title: "The Confrontation",
     image: "forest-edge",
     text: (state) => {
+      // Find the Iron Scroll! It's not in the archives.
+      if (state.inventory.includes("Priest's Diary Page")) {
+          // This is a placeholder for a new scene where the user finds the scroll in the church.
+          // For now, let's assume they find it.
+          if (!state.inventory.includes("Iron Scroll")) {
+            state.inventory.push("Iron Scroll");
+          }
+      }
+
       if (state.piperInsight >= 5 && state.townFavor >= 2 && state.inventory.includes("Iron Scroll")) {
         return "With the town's trust, an understanding of the Piper's magic, and the Iron Scroll in hand, you are ready. You have everything you need to face the melody and bring the children home.";
       }
@@ -526,7 +602,3 @@ export const story: Record<string, Scene> = {
     choices: [{ text: "Play Again", nextScene: "start" }],
   }
 };
-
-    
-
-    
