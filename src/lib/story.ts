@@ -83,7 +83,7 @@ export const story: Record<string, Scene> = {
   town_square_poster: {
     id: "town_square_poster",
     title: "Official Decree",
-    image: "hamelin-square",
+    image: "hamelin-square-far",
     text: "You tear the poster from the post. It's a crude sketch of a man in flamboyant clothes, a pipe in hand. The text, signed by Mayor Wilhelm, offers a meager reward for the capture of a 'charlatan and kidnapper' known only as The Piper. It makes no mention of magic, plagues, or any strange phenomena, framing the tragedy as a simple, non-magical crime.",
     choices: [
       {
@@ -100,7 +100,7 @@ export const story: Record<string, Scene> = {
   town_square_mayor: {
     id: "town_square_mayor",
     title: "The Mayor's Plea",
-    image: "hamelin-square",
+    image: "hamelin-townsfolk",
     text: "'You're not from Hamelin,' Mayor Wilhelm states, his gaze sharp but desperate. 'Don't listen to the old tales of plagues and reckonings. That's just fear talking. Our children are gone. The Piper... he was a man, a charlatan we refused to pay, and now he's taken his revenge. If you have skills, we need them. What will you do?'",
     choices: [
       {
@@ -524,14 +524,14 @@ export const story: Record<string, Scene> = {
   archives_escape_grace: {
     id: "archives_escape_grace",
     title: "A Glib Tongue",
-    image: "hamelin-square",
+    image: "hamelin-townsfolk",
     text: "You manage to spin a convincing tale about checking security for the mayor. Your reputation precedes you, and they let you off with a stern warning. 'The mayor trusts you,' the guard grumbles, 'Don't make us regret that.' You've avoided the cells, but your goodwill has taken a hit.",
     choices: [{ text: "Best not to press my luck. Return to the square.", nextScene: "town_square_entry" }],
   },
   archives_escape_magic: {
     id: "archives_escape_magic",
     title: "A Flash of Insight",
-    image: "hamelin-square",
+    image: "hamelin-townsfolk",
     text: "You mutter a few strange words, focusing your will on a nearby gas lamp. It flares violently, casting eerie shadows. The guards jump back, startled. In their confusion, you slip away into the darkness. A risky move, but your understanding of the arcane grows.",
     choices: [{ text: "Disappear into the night.", nextScene: "town_square_entry" }],
   },
