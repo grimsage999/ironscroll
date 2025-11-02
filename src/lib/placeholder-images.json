@@ -31,6 +31,12 @@
       "imageHint": "pixel art old man"
     },
     {
+      "id": "tavern-interior-player",
+      "description": "The traveler entering the Weary Wanderer tavern.",
+      "imageUrl": "https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/6.png",
+      "imageHint": "pixel art tavern"
+    },
+    {
       "id": "hamelin-square",
       "description": "The dreary town square of Hamelin in pixel art.",
       "imageUrl": "https://images.unsplash.com/photo-1696079643384-d2f19f31c1e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwaXhlbCUyMGFydCUyMG1lZGlldmFsJTIwdG93bnxlbnwwfHx8fDE3NjE5ODIwODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
