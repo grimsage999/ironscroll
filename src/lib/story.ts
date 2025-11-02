@@ -480,7 +480,7 @@ export const story: Record<string, Scene> = {
   archives_sneak_fail: {
     id: "archives_sneak_fail",
     title: "Caught!",
-    image: "bad-ending",
+    image: "hamelin-guards",
     text: "Your attempt to break in is clumsy and loud. A guard patrol rounds the corner, lantern held high. 'Hold it right there, skulker!' one of them shouts. They corner you against the archives door.",
     choices: [
       {
@@ -519,7 +519,7 @@ export const story: Record<string, Scene> = {
   dead_end_arrest: {
     id: "dead_end_arrest",
     title: "A Cold Cell",
-    image: "bad-ending",
+    image: "hamelin-guards",
     ending: true,
     text: "Your bribe is seen as an insult. 'Think we can be bought while our children are missing?' the guard spits. You're thrown into a damp cell for the night. By morning, any trust you've built is gone. You are escorted to the edge of town and told never to return. You have failed.",
     choices: [{ text: "Start Over", variant: "destructive", nextScene: "start" }],
