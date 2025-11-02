@@ -1,6 +1,3 @@
-
-import type { PlaceHolderImages } from "@/lib/placeholder-images";
-
 export interface GameState {
   currentSceneId: string;
   townFavor: number;
@@ -26,11 +23,18 @@ export interface Choice {
   variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
 }
 
+export interface ImagePlaceholder {
+  id: string;
+  description: string;
+  imageUrl: string;
+  imageHint: string;
+}
+
 export interface Scene {
   id: string;
   title: string;
   text: string | ((state: GameState) => string);
-  image?: (typeof PlaceHolderImages)[number]['id'];
+  image?: string;
   choices: Choice[];
   ending?: boolean;
 }

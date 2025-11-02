@@ -66,8 +66,8 @@ export default function GameClient() {
     return `[${requirements.join(' | ')}]`;
   }
 
-  const sceneImage = currentScene.image ? PlaceHolderImages.find(img => img.id === currentScene.image) : undefined;
-  const textContent = typeof currentScene.text === 'function' ? currentScene.text(gameState) : currentScene.text;
+  const sceneImage = currentScene && currentScene.image ? PlaceHolderImages.find(img => img.id === currentScene.image) : undefined;
+  const textContent = currentScene ? (typeof currentScene.text === 'function' ? currentScene.text(gameState) : currentScene.text) : "";
 
   if (!currentScene) {
     return <LoadingIndicator />;
