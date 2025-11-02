@@ -397,7 +397,7 @@ export const story: Record<string, Scene> = {
         if (state.townFavor > 0) {
             return baseText + "The Mayor has given you permission to enter. The guards nod as you approach.";
         }
-        return baseText + "The doors are locked, and a guard stands watch. You'll need a good reason to get inside.";
+        return baseText + "The doors are locked, and a guard stands watch. You'll need a good reason to get in.";
     },
     choices: [
       {
@@ -602,3 +602,5 @@ export const story: Record<string, Scene> = {
     choices: [{ text: "Play Again", nextScene: "start" }],
   }
 };
+
+    
