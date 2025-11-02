@@ -69,6 +69,10 @@ export default function GameClient() {
   const sceneImage = currentScene.image ? PlaceHolderImages.find(img => img.id === currentScene.image) : undefined;
   const textContent = typeof currentScene.text === 'function' ? currentScene.text(gameState) : currentScene.text;
 
+  if (!currentScene) {
+    return <LoadingIndicator />;
+  }
+
   return (
     <div className="w-full flex flex-col items-center">
        <audio ref={choiceSoundRef} src="https://firebasestudio-hosting.web.app/sfx/8-bit-confirm.wav" preload="auto"></audio>
@@ -76,7 +80,7 @@ export default function GameClient() {
       <StatusBar />
       <Card className="w-full max-w-4xl shadow-lg border-border/30 overflow-hidden bg-black">
         <div className="relative bg-black">
-          {sceneImage && sceneImage.imageUrl && (
+          {sceneImage?.imageUrl && (
             <div className="relative aspect-video w-full">
               <Image
                 src={sceneImage.imageUrl}

@@ -51,7 +51,7 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
     });
   }, []);
   
-  const currentScene = story[gameState.currentSceneId];
+  const currentScene = story[gameState.currentSceneId] || story["start"];
 
   return (
     <GameContext.Provider value={{ gameState, currentScene, handleChoice, isLoading, setLoading }}>

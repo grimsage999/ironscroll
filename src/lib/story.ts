@@ -628,5 +628,3 @@ export const story: Record<string, Scene> = {
     choices: [{ text: "Play Again", nextScene: "start" }],
   },
 }
-
-    
