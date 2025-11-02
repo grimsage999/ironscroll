@@ -407,8 +407,48 @@ export const story: Record<string, Scene> = {
     id: "archives_sneak_fail",
     title: "Caught!",
     image: "bad-ending",
-    text: "Your attempt to break in is clumsy. A guard patrol finds you, and you're thrown into a cell for the night. You've lost time and the trust of the town.",
-    choices: [{ text: "Wait for the morning.", effects: { townFavor: -3 }, nextScene: "dead_end" }],
+    text: "Your attempt to break in is clumsy and loud. A guard patrol rounds the corner, lantern held high. 'Hold it right there, skulker!' one of them shouts. They corner you against the archives door.",
+    choices: [
+      {
+        text: "Try to bribe them.",
+        effects: { townFavor: -2 },
+        nextScene: "dead_end_arrest"
+      },
+      {
+        text: "Talk your way out of it.",
+        requires: { townFavor: 2 },
+        effects: { townFavor: -1 },
+        nextScene: "archives_escape_grace"
+      },
+      {
+        text: "Use arcane knowledge to create a distraction.",
+        requires: { piperInsight: 3 },
+        effects: { piperInsight: 1 },
+        nextScene: "archives_escape_magic"
+      },
+    ],
+  },
+  archives_escape_grace: {
+    id: "archives_escape_grace",
+    title: "A Glib Tongue",
+    image: "hamelin-square",
+    text: "You manage to spin a convincing tale about checking security for the mayor. Your reputation precedes you, and they let you off with a stern warning. 'The mayor trusts you,' the guard grumbles, 'Don't make us regret that.' You've avoided the cells, but your goodwill has taken a hit.",
+    choices: [{ text: "Best not to press my luck. Return to the square.", nextScene: "town_square_entry" }],
+  },
+  archives_escape_magic: {
+    id: "archives_escape_magic",
+    title: "A Flash of Insight",
+    image: "hamelin-square",
+    text: "You mutter a few strange words, focusing your will on a nearby gas lamp. It flares violently, casting eerie shadows. The guards jump back, startled. In their confusion, you slip away into the darkness. A risky move, but your understanding of the arcane grows.",
+    choices: [{ text: "Disappear into the night.", nextScene: "town_square_entry" }],
+  },
+  dead_end_arrest: {
+    id: "dead_end_arrest",
+    title: "A Cold Cell",
+    image: "bad-ending",
+    ending: true,
+    text: "Your bribe is seen as an insult. 'Think we can be bought while our children are missing?' the guard spits. You're thrown into a damp cell for the night. By morning, any trust you've built is gone. You are escorted to the edge of town and told never to return. You have failed.",
+    choices: [{ text: "Start Over", variant: "destructive", nextScene: "start" }],
   },
   dead_end: {
     id: "dead_end",
