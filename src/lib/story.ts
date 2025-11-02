@@ -6,7 +6,7 @@ export const story: Record<string, Scene> = {
     id: "start",
     title: "The Shadow of the Piper",
     image: "hamelin-square",
-    text: "The town of Hamelin is suffocating. A pall of unnatural silence hangs in the air, a quiet that feels older and deeper than the recent disappearances. The children are gone, lured away by the Piper's melody, and a creeping dread, familiar to the town's oldest families, has taken root. You, a traveler with a knack for the forgotten and the arcane, have arrived in this desperate place. What is your first move?",
+    text: "The town of Hamelin is suffocating. A pall of unnatural silence hangs over the gothic architecture, a quiet that feels older and deeper than the recent disappearances. Children's toys lie abandoned in the cobbled streets. The children are gone, lured away by the Piper's melody, and a creeping dread, familiar to the town's oldest families, has taken root. You, a traveler with a knack for the forgotten and the arcane, have arrived in this desperate place. What is your first move?",
     choices: [
       {
         text: "Head to the 'Weary Wanderer' tavern for rumors.",
@@ -22,7 +22,7 @@ export const story: Record<string, Scene> = {
     id: "tavern",
     title: "The Weary Wanderer",
     image: "tavern-interior",
-    text: "The tavern is a pit of hushed despair. An old man in the corner mutters into his ale, his eyes distant. 'It's the Whispering Plague come again,' he rasps to anyone who'll listen. 'Same as a generation ago. The music comes, and the wicked are culled. The Piper... he's no man. He's a reckoning.' He talks of an 'Iron Scroll' the Mayor keeps locked away, a relic from the first founding that holds the town's 'true name' and its only protection.",
+    text: "The tavern is a pit of hushed despair, thick with the sour smell of stale ale. An old man in the corner, his face a roadmap of worries, mutters into his cup. 'It's the Whispering Plague come again,' he rasps. 'Same as a generation ago. The music comes, and the wicked are culled. The Piper... he's no man. He's a reckoning.' He talks of an 'Iron Scroll' the Mayor keeps locked away, a relic from the first founding that holds the town's 'true name' and its only protection.",
     choices: [
       {
         text: "Trust the old man. Go to the archives.",
@@ -39,7 +39,7 @@ export const story: Record<string, Scene> = {
     id: "town_square_entry",
     title: "The Heart of Hamelin",
     image: "hamelin-square",
-    text: "You step into the town square. Mayor Wilhelm is trying to rally the few people present, his face a mask of strained authority. The air is thick with fear and suspicion. From here, you can see the bustling market, the solemn church, and the alley leading to the tavern.",
+    text: "You step into the town square, surrounded by timber-framed houses leaning against each other. Mayor Wilhelm is trying to rally the few people present, his face a mask of strained authority. The air is thick with fear and suspicion. From here, you can see the bustling market, the solemn church, and the alley leading to the tavern.",
     choices: [
       {
         text: "Approach Mayor Wilhelm.",
@@ -85,7 +85,7 @@ export const story: Record<string, Scene> = {
     id: "market",
     title: "The Silent Market",
     image: "market-square",
-    text: "The market is unusually quiet. A merchant whispers that a few days before the children vanished, all the rats in town were found dead in the sewers, each with a strange, sweet-smelling herb in its mouth. 'Just like the stories of the Whispering Plague,' she mutters, looking over her shoulder. You notice a discarded pouch on the ground.",
+    text: "The market is unusually quiet, the colorful stalls starkly contrasting the somber mood. A merchant whispers that a few days before the children vanished, all the rats in town were found dead in the sewers, each with a strange, sweet-smelling herb in its mouth. 'Just like the stories of the Whispering Plague,' she mutters. You notice a discarded pouch on the ground, nearly hidden beneath a stall.",
     choices: [
       {
         text: "Investigate the pouch.",
@@ -106,7 +106,7 @@ export const story: Record<string, Scene> = {
     id: "market_clue",
     title: "A Fragrant Clue",
     image: "market-square",
-    text: "You pick up the pouch. Inside is a dried herb with a sickly sweet scent. It feels significant, a piece of the puzzle you can't yet place. The merchant who told you about the rats now looks at you with fear.",
+    text: "You pick up the small leather pouch. Inside is a dried herb with a sickly sweet scent. It feels significant, a piece of the puzzle you can't yet place. The merchant who told you about the rats now looks at you with fear, noticing what you've found.",
     choices: [
        {
         text: "Head to the sewers to investigate the rats.",
@@ -122,7 +122,7 @@ export const story: Record<string, Scene> = {
     id: "church",
     title: "The House of Silence",
     image: "church-interior",
-    text: "The church is empty, save for a frantic priest. 'He sabotaged it!' the priest cries, pointing at the bell tower. 'The Warding Bell! For generations, it has been rung on the Day of Warding to keep the old evils at bay. But he severed the rope with... with his magic. A crystalline shard! The profane melody is a mockery of our most sacred ritual!'",
+    text: "The church is cold and empty, save for a frantic priest. Dust motes dance in the light from the stained-glass windows. 'He sabotaged it!' the priest cries, pointing at the bell tower. 'The Warding Bell! For generations, it has been rung on the Day of Warding to keep the old evils at bay. But he severed the rope with... with his magic. A crystalline shard! The profane melody is a mockery of our most sacred ritual!'",
     choices: [
       {
         text: "Examine the bell tower.",
@@ -144,7 +144,7 @@ export const story: Record<string, Scene> = {
     id: "church_clue",
     title: "A Resonant Clue",
     image: "church-interior",
-    text: "You climb to the bell tower and retrieve the crystalline shard. It hums faintly in your hand, vibrating at a frequency you can feel in your teeth. This was no ordinary act of vandalism; it was a targeted, ritualistic act.",
+    text: "You climb the dusty steps to the bell tower. Near the severed bell rope, you find a shimmering crystalline shard. It hums faintly in your hand, vibrating at a frequency you can feel in your teeth. This was no ordinary act of vandalism; it was a targeted, ritualistic act.",
     choices: [
       {
         text: "The melody must be the key. Question the priest.",
@@ -204,7 +204,7 @@ export const story: Record<string, Scene> = {
     id: "sewers_entrance",
     title: "The Gaping Maw",
     image: "sewer-tunnel",
-    text: "You find a sewer grate slightly ajar in a forgotten alley. A foul stench wafts out, mingling with the sickly-sweet scent of the strange herb. You can also hear a faint, rhythmic dripping and something else... a low hum, similar to the shard from the church.",
+    text: "You find a sewer grate slightly ajar in a forgotten, refuse-strewn alley. A foul stench wafts out, mingling with the sickly-sweet scent of the strange herb. You can also hear a faint, rhythmic dripping and something else... a low hum, similar to the shard from the church.",
     choices: [
       {
         text: "Descend into the darkness.",
@@ -370,7 +370,7 @@ export const story: Record<string, Scene> = {
    archives_sneak_check: {
     id: "archives_sneak_check",
     title: "Under Cover of Darkness",
-    text: "You wait for nightfall and approach the archives. The guard is gone, but the lock is sturdy. How will you get in?",
+    text: "You wait for nightfall and approach the archives. The guard is gone, but the lock on the heavy oak door is sturdy. How will you get in?",
     image: "dusty-archives",
     choices: [
         {
