@@ -5,7 +5,7 @@ export const story: Record<string, Scene> = {
   start: {
     id: "start",
     title: "The Shadow of the Piper",
-    image: "hamelin-square",
+    image: "hamelin-children",
     text: "The town of Hamelin is suffocating. A pall of unnatural silence hangs over the gothic architecture, a quiet that feels older and deeper than the recent disappearances. Children's toys lie abandoned in the cobbled streets. The children are gone, lured away by the Piper's melody, and a creeping dread, familiar to the town's oldest families, has taken root. You, a traveler with a knack for the forgotten and the arcane, have arrived in this desperate place. What is your first move?",
     choices: [
       {
