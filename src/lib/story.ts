@@ -471,11 +471,11 @@ export const story: Record<string, Scene> = {
     title: "The Confrontation",
     image: "forest-edge",
     text: (state) => {
-      if (state.piperInsight >= 5 && state.townFavor >= 2) {
-        return "With the town's trust and the Piper's secrets laid bare, you are ready. You have everything you need to face the melody and bring the children home.";
+      if (state.piperInsight >= 5 && state.townFavor >= 2 && state.inventory.includes("Iron Scroll")) {
+        return "With the town's trust, the Piper's secrets, and the Iron Scroll in hand, you are ready. You have everything you need to face the melody and bring the children home.";
       }
-      if (state.piperInsight >= 5) {
-        return "You have pieced together the arcane puzzle, but the town remains suspicious of you. You must proceed alone, your knowledge your only shield.";
+      if (state.piperInsight >= 5 && state.inventory.includes("Iron Scroll")) {
+        return "You have pieced together the arcane puzzle and found the Iron Scroll, but the town remains suspicious of you. You must proceed alone, your knowledge your only shield.";
       }
       return "You've gathered some clues, but the full picture eludes you. You head towards the forest, hoping for the best, but a sense of unease follows you. Are you truly ready?";
     },
@@ -494,12 +494,12 @@ export const story: Record<string, Scene> = {
     choices: [
       {
         text: "Use the scroll and the town's hope to break the spell.",
-        requires: { piperInsight: 5, townFavor: 2 },
+        requires: { inventory: ["Iron Scroll"], piperInsight: 5, townFavor: 2 },
         nextScene: "ending_good"
       },
       {
-        text: "Use your insight to understand and confront the Piper alone.",
-        requires: { piperInsight: 5 },
+        text: "Use your insight and the scroll to confront the Piper alone.",
+        requires: { inventory: ["Iron Scroll"], piperInsight: 5 },
         nextScene: "ending_insight"
       },
       {
@@ -522,7 +522,7 @@ export const story: Record<string, Scene> = {
     title: "A Terrible Truth",
     image: "good-ending",
     ending: true,
-    text: "You understand the Piper's motives—he wasn't luring the children to their doom, but away from a greater blight he believed was coming to Hamelin. You confront him not with force, but with knowledge. Intrigued, he lowers his pipe. He agrees to return the children, but in exchange, you must leave with him, to help him combat the true darkness. Hamelin is saved, but you are lost to its history, another figure of myth. The town never learns the truth.",
+    text: "Using the Iron Scroll, you counter the Piper's melody, but without the town's support, the magic is volatile. The spell shatters, freeing the children, but the backlash reveals a terrible truth: the Piper wasn't luring them to their doom, but saving them from a blight festering within Hamelin itself. He offers you a choice: leave with him to fight the true threat, or stay and watch the town slowly rot from within. Hamelin is saved for now, but you are left with a heavy burden of knowledge.",
     choices: [{ text: "Play Again", nextScene: "start" }],
   }
 };
