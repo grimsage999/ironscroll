@@ -39,7 +39,7 @@ export const story: Record<string, Scene> = {
   town_square_entry: {
     id: "town_square_entry",
     title: "The Heart of Hamelin",
-    image: "hamelin-square",
+    image: "hamelin-townsfolk",
     text: "You step into the town square, surrounded by timber-framed houses leaning against each other. Mayor Wilhelm is trying to rally the few people present, his face a mask of strained authority. The air is thick with fear and suspicion. A crude 'WANTED' poster is nailed to a nearby post. From here, you can see the bustling market, the solemn church, and the alley leading to the tavern.",
     choices: [
       {
