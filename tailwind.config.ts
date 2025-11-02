@@ -1,3 +1,4 @@
+
 import type {Config} from 'tailwindcss';
 
 export default {
@@ -10,8 +11,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['VT323', 'monospace'],
-        headline: ['VT323', 'monospace'],
+        body: ['"VT323"', 'monospace'],
+        headline: ['"VT323"', 'monospace'],
         code: ['monospace'],
       },
       colors: {
