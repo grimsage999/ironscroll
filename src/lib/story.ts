@@ -286,9 +286,9 @@ export const story: Record<string, Scene> = {
     text: "'It's not a sound, it's a feeling,' the huntsman says, not meeting your eyes. 'Pulls at your soul. The Piper walked that path, and the forest has held his tune ever since. The children followed it, I'm sure of it.' He points to a barely-visible trail marked by a gnarled, ancient tree.",
     choices: [
       {
-        text: "This is the way. You have a direction now.",
+        text: "This is it. The final confrontation awaits.",
         effects: { piperInsight: 2 },
-        nextScene: "ending_insight"
+        nextScene: "confrontation"
       },
       {
         text: "It's too dangerous. Return to the safety of town.",
@@ -399,7 +399,7 @@ export const story: Record<string, Scene> = {
       {
         text: "Examine the scroll's arcane markings.",
         effects: { piperInsight: 2, inventoryAdd: ["Iron Scroll"] },
-        nextScene: "ending_insight",
+        nextScene: "confrontation",
       }
     ],
   },
@@ -450,8 +450,8 @@ export const story: Record<string, Scene> = {
     text: "Your bribe is seen as an insult. 'Think we can be bought while our children are missing?' the guard spits. You're thrown into a damp cell for the night. By morning, any trust you've built is gone. You are escorted to the edge of town and told never to return. You have failed.",
     choices: [{ text: "Start Over", variant: "destructive", nextScene: "start" }],
   },
-  dead_end: {
-    id: "dead_end",
+  dead_end_trail: {
+    id: "dead_end_trail",
     title: "A Cold Trail",
     image: "bad-ending",
     ending: true,
@@ -466,12 +466,65 @@ export const story: Record<string, Scene> = {
     text: "You follow the trail of toys deep into the woods. The faint music grows stronger, a sweet, cloying melody that muddles your thoughts. You lose your way, wandering in circles, another lost soul claimed by the Piper's unending song.",
     choices: [{ text: "Start Over", variant: "destructive", nextScene: "start" }],
   },
+  confrontation: {
+    id: "confrontation",
+    title: "The Confrontation",
+    image: "forest-edge",
+    text: (state) => {
+      if (state.piperInsight >= 5 && state.townFavor >= 2) {
+        return "With the town's trust and the Piper's secrets laid bare, you are ready. You have everything you need to face the melody and bring the children home.";
+      }
+      if (state.piperInsight >= 5) {
+        return "You have pieced together the arcane puzzle, but the town remains suspicious of you. You must proceed alone, your knowledge your only shield.";
+      }
+      return "You've gathered some clues, but the full picture eludes you. You head towards the forest, hoping for the best, but a sense of unease follows you. Are you truly ready?";
+    },
+    choices: [
+      {
+        text: "Face the Piper.",
+        nextScene: "ending_final_choice"
+      }
+    ]
+  },
+  ending_final_choice: {
+    id: "ending_final_choice",
+    title: "Face the Piper",
+    image: "forest-edge",
+    text: "You follow the path into the woods, the Piper's song growing stronger until it's a physical presence. You arrive in a clearing to see the Piper, his back to you, playing his melody to the lost children of Hamelin who dance in a trance. What you do next will decide everything.",
+    choices: [
+      {
+        text: "Use the scroll and the town's hope to break the spell.",
+        requires: { piperInsight: 5, townFavor: 2 },
+        nextScene: "ending_good"
+      },
+      {
+        text: "Use your insight to understand and confront the Piper alone.",
+        requires: { piperInsight: 5 },
+        nextScene: "ending_insight"
+      },
+      {
+        text: "Charge in blindly.",
+        nextScene: "dead_end_forest"
+      }
+    ]
+  },
+  ending_good: {
+    id: "ending_good",
+    title: "The Dawn of Hamelin",
+    image: "good-ending",
+    ending: true,
+    text: "You counter the Piper's profane melody with the true name of Hamelin, read from the Iron Scroll. Your voice, amplified by the hope of the townsfolk who trusted you, shatters the crystalline resonators on his pipe. The spell breaks. The children stop dancing, confused but safe. The Piper fades like a shadow, banished by the town's unified spirit. You are a hero.",
+    choices: [{ text: "Play Again", nextScene: "start" }],
+  },
+
   ending_insight: {
     id: "ending_insight",
     title: "A Terrible Truth",
     image: "good-ending",
     ending: true,
-    text: "You have pieced together the Piper's plan and found the path to his lair. You understand the arcane forces at play. But in your focus on the mythos, the children themselves slipped away. You have the truth, but Hamelin has lost its future. It is a bitter victory.",
-    choices: [{ text: "Start Over", nextScene: "start" }],
-  },
+    text: "You understand the Piper's motives—he wasn't luring the children to their doom, but away from a greater blight he believed was coming to Hamelin. You confront him not with force, but with knowledge. Intrigued, he lowers his pipe. He agrees to return the children, but in exchange, you must leave with him, to help him combat the true darkness. Hamelin is saved, but you are lost to its history, another figure of myth. The town never learns the truth.",
+    choices: [{ text: "Play Again", nextScene: "start" }],
+  }
 };
+
+    
