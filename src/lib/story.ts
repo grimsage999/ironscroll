@@ -6,7 +6,7 @@ export const story: Record<string, Scene> = {
     id: "start",
     title: "The Shadow of the Piper",
     image: "hamelin-square",
-    text: "The town of Hamelin is suffocating. A pall of unnatural silence hangs in the air, broken only by the whispers of frightened townsfolk. The children are gone, lured away by the Piper's melody, and a creeping dread has taken root in their absence. You, a traveler with a knack for the forgotten and the arcane, have arrived in this desperate place. What is your first move?",
+    text: "The town of Hamelin is suffocating. A pall of unnatural silence hangs in the air, a quiet that feels older and deeper than the recent disappearances. The children are gone, lured away by the Piper's melody, and a creeping dread, familiar to the town's oldest families, has taken root. You, a traveler with a knack for the forgotten and the arcane, have arrived in this desperate place. What is your first move?",
     choices: [
       {
         text: "Head to the 'Weary Wanderer' tavern for rumors.",
@@ -22,7 +22,7 @@ export const story: Record<string, Scene> = {
     id: "tavern",
     title: "The Weary Wanderer",
     image: "tavern-interior",
-    text: "The tavern is a pit of hushed despair. An old man in the corner, nursing his ale, mutters about a strange 'Iron Scroll' the Piper was seen with before he vanished. He claims the mayor has it under lock and key in the town archives. This could be a vital clue.",
+    text: "The tavern is a pit of hushed despair. An old man in the corner mutters into his ale, his eyes distant. 'It's the Whispering Plague come again,' he rasps to anyone who'll listen. 'Same as a generation ago. The music comes, and the wicked are culled. The Piper... he's no man. He's a reckoning.' He talks of an 'Iron Scroll' the Mayor keeps locked away, a relic from the first founding that holds the town's 'true name' and its only protection.",
     choices: [
       {
         text: "Trust the old man. Go to the archives.",
@@ -30,7 +30,7 @@ export const story: Record<string, Scene> = {
         nextScene: "archives_approach",
       },
       {
-        text: "Dismiss it as drunken rambling and go to the town square.",
+        text: "Dismiss it as superstitious rambling and go to the town square.",
         nextScene: "town_square_entry",
       },
     ],
@@ -63,7 +63,7 @@ export const story: Record<string, Scene> = {
     id: "town_square_mayor",
     title: "The Mayor's Plea",
     image: "hamelin-square",
-    text: "Mayor Wilhelm notices you observing. His gaze is sharp, but desperate. 'You're not from Hamelin,' he states. 'If you have skills, we need them. Our children are gone. The Piper...' he trails off, shaking his head. 'What will you do?'",
+    text: "'You're not from Hamelin,' Mayor Wilhelm states, his gaze sharp but desperate. 'Don't listen to the old tales of plagues and reckonings. That's just fear talking. Our children are gone. The Piper... he was a man, a charlatan we refused to pay, and now he's taken his revenge. If you have skills, we need them. What will you do?'",
     choices: [
       {
         text: "Offer your help to the Mayor publicly.",
@@ -71,7 +71,7 @@ export const story: Record<string, Scene> = {
         nextScene: "mayor_accepts",
       },
       {
-        text: "Publicly question his leadership.",
+        text: "Publicly question his leadership and his version of events.",
         effects: { townFavor: -2 },
         nextScene: "mayor_rejects",
       },
@@ -85,7 +85,7 @@ export const story: Record<string, Scene> = {
     id: "market",
     title: "The Silent Market",
     image: "market-square",
-    text: "The market is unusually quiet. A merchant whispers that a few days before the children vanished, all the rats in town were found dead in the sewers, each with a strange, sweet-smelling herb in its mouth. You notice a discarded pouch on the ground.",
+    text: "The market is unusually quiet. A merchant whispers that a few days before the children vanished, all the rats in town were found dead in the sewers, each with a strange, sweet-smelling herb in its mouth. 'Just like the stories of the Whispering Plague,' she mutters, looking over her shoulder. You notice a discarded pouch on the ground.",
     choices: [
       {
         text: "Investigate the pouch.",
@@ -122,7 +122,7 @@ export const story: Record<string, Scene> = {
     id: "church",
     title: "The House of Silence",
     image: "church-interior",
-    text: "The church is empty, save for a frantic priest. He speaks of a 'profane melody' and how the church's sacred bell, meant to ward off evil, was sabotaged. He points to the bell tower, where the rope has been cleanly severed by a strange, crystalline shard left wedged in the wood.",
+    text: "The church is empty, save for a frantic priest. 'He sabotaged it!' the priest cries, pointing at the bell tower. 'The Warding Bell! For generations, it has been rung on the Day of Warding to keep the old evils at bay. But he severed the rope with... with his magic. A crystalline shard! The profane melody is a mockery of our most sacred ritual!'",
     choices: [
       {
         text: "Examine the bell tower.",
@@ -130,7 +130,7 @@ export const story: Record<string, Scene> = {
         nextScene: "church_clue"
       },
       {
-        text: "Ask the priest about the 'profane melody'.",
+        text: "Ask about the Day of Warding.",
         effects: { piperInsight: 2 },
         nextScene: "church_melody"
       },
@@ -144,7 +144,7 @@ export const story: Record<string, Scene> = {
     id: "church_clue",
     title: "A Resonant Clue",
     image: "church-interior",
-    text: "You climb to the bell tower and retrieve the crystalline shard. It hums faintly in your hand, vibrating at a frequency you can feel in your teeth. This was no ordinary act of vandalism.",
+    text: "You climb to the bell tower and retrieve the crystalline shard. It hums faintly in your hand, vibrating at a frequency you can feel in your teeth. This was no ordinary act of vandalism; it was a targeted, ritualistic act.",
     choices: [
       {
         text: "The melody must be the key. Question the priest.",
@@ -166,7 +166,7 @@ export const story: Record<string, Scene> = {
     id: "church_shard_reveal",
     title: "A Fearful Recognition",
     image: "church-interior",
-    text: "You show the humming shard to the priest. His face drains of color. 'That... that is the Piper's magic. He used similar crystals to focus his melody, to make the very stones of Hamelin resonate with his song. He called it the 'resonant heart' of his instrument.'",
+    text: "You show the humming shard to the priest. His face drains of color. 'That... that is the Piper's magic. He uses them to focus his melody, to make the very stones of Hamelin resonate. He called it the 'resonant heart' of his instrument. He's turning our own town against us.'",
     choices: [
       {
         text: "Where did he focus this energy?",
@@ -183,14 +183,14 @@ export const story: Record<string, Scene> = {
     id: "church_melody",
     title: "A Profane Tune",
     image: "church-interior",
-    text: "'The Piper's music... it wasn't just a song,' the priest whispers, his eyes wide. 'It was a ritual. It resonated with things that should not be disturbed. I heard it echo from the sewers just as much as from the streets. He was obsessed with the town archives, too. Claimed the town's founding documents held a secret about its 'true name.' A dangerous blasphemy!'",
+    text: "'The Piper's music... it's a ritual,' the priest whispers, his eyes wide. 'It resonates with things that should not be disturbed. I heard it echo from the sewers, a dark counterpoint to the hymns. He was obsessed with the archives, too. Claimed our founding documents held the secret to the town's 'true name.' A blasphemy against Hamelin's history!'",
     choices: [
       {
         text: "The sewers seem important. Go there.",
         nextScene: "sewers_entrance"
       },
       {
-        text: "Contradictory clues. Head to the archives.",
+        text: "The archives hold the key. I must get in.",
         effects: { inventoryAdd: ["Contradictory Scroll Rumor"]},
         nextScene: "archives_approach"
       },
@@ -204,7 +204,7 @@ export const story: Record<string, Scene> = {
     id: "sewers_entrance",
     title: "The Gaping Maw",
     image: "sewer-tunnel",
-    text: "You find a sewer grate slightly ajar in a forgotten alley. A foul stench wafts out, but you can also hear a faint, rhythmic dripping and something else... a low hum, similar to the shard from the church.",
+    text: "You find a sewer grate slightly ajar in a forgotten alley. A foul stench wafts out, mingling with the sickly-sweet scent of the strange herb. You can also hear a faint, rhythmic dripping and something else... a low hum, similar to the shard from the church.",
     choices: [
       {
         text: "Descend into the darkness.",
@@ -221,7 +221,7 @@ export const story: Record<string, Scene> = {
     id: "sewers_explore",
     title: "Below Hamelin",
     image: "sewer-tunnel",
-    text: "The sewers are a labyrinth of filth and echoes. You find dozens of dead rats, all clutching the same sweet herb you found in the market. In the central cistern, you find arcane symbols painted on the walls, still glowing faintly. They seem to focus the strange energy you've felt.",
+    text: "The sewers are a labyrinth of filth and echoes. You find dozens of dead rats, all clutching the same sweet herb you found in the market. In the central cistern, you find arcane symbols painted on the walls, still glowing faintly. They seem to focus the strange energy you've felt, channeling it through the town's foundations.",
     choices: [
       {
         text: "The symbols match the shard. This is about magic.",
@@ -246,7 +246,7 @@ export const story: Record<string, Scene> = {
     id: "forest_outskirts",
     title: "The Whispering Woods",
     image: "forest-edge",
-    text: "The forest that borders Hamelin is unnaturally silent. You find a series of small, discarded wooden toys, leading a path into the woods. A lone huntsman warns you to turn back, speaking of a path that 'sings a song that you can't stop following'.",
+    text: "The forest that borders Hamelin is unnaturally silent. You find a series of small, discarded wooden toys, leading a path into the woods. A lone huntsman warns you to turn back. 'That's the Gloomwood,' he says. 'Full of old magic. It sings a song that you can't stop following, especially if you're not right with the world.'",
     choices: [
       {
         text: "Examine the toys.",
@@ -316,7 +316,7 @@ export const story: Record<string, Scene> = {
     id: "mayor_rejects",
     title: "An Unwelcome Voice",
     image: "bad-ending",
-    text: "Your words stir unrest among the small crowd. The Mayor's face hardens. 'We have no time for doubters and rabble-rousers!' he barks. You've made an enemy of him, and official channels are now closed to you.",
+    text: "Your words stir unrest among the small crowd. The Mayor's face hardens. 'We have no time for doubters and rabble-rousers who trade in old wives' tales!' he barks. You've made an enemy of him, and official channels are now closed to you.",
     choices: [
       {
         text: "Find your own way. The town can't be trusted.",
@@ -331,13 +331,13 @@ export const story: Record<string, Scene> = {
     text: (state) => {
         let baseText = "You stand before the heavy oak doors of the town archives. ";
         if (state.inventory.includes("Iron Scroll Rumor") && state.inventory.includes("Contradictory Scroll Rumor")) {
-            return baseText + "The old man in the tavern said the Mayor had the scroll, but the priest claimed the Piper was after the town's founding documents. Who is telling the truth? How will you proceed?";
+            return baseText + "The old man in the tavern said the Mayor had the scroll, but the priest claimed the Piper was after the town's founding documents. The Mayor denies the old stories, but the priest embraces them. Who is telling the truth?";
         }
         if (state.inventory.includes("Iron Scroll Rumor")) {
-            return baseText + "The old man in the tavern was convinced the Mayor has the 'Iron Scroll' locked up in here. What will you do?";
+            return baseText + "The old man in the tavern was convinced the Mayor has the 'Iron Scroll' locked up in here. He seemed to think it was the key to everything.";
         }
         if (state.inventory.includes("Contradictory Scroll Rumor")) {
-            return baseText + "The priest seemed certain the Piper was after the town's founding documents to learn its 'true name.' What's your plan?";
+            return baseText + "The priest seemed certain the Piper was after the town's founding documents to learn its 'true name.' An act he called blasphemy.";
         }
         if (state.townFavor > 0) {
             return baseText + "The Mayor has given you permission to enter. The guards nod as you approach.";
@@ -391,9 +391,9 @@ export const story: Record<string, Scene> = {
     image: "dusty-archives",
     text: (state) => {
         if (state.inventory.includes("Contradictory Scroll Rumor")) {
-            return "Following the priest's lead, you ignore the official town records and look for older, forgotten documents. You find a section on pre-founding history and a heavy, cold scroll of etched iron. It seems ancient, humming with a faint, otherworldly energy.";
+            return "Following the priest's lead, you ignore the official town records and look for older, pre-founding documents. Tucked away in a dusty corner, you find it: a heavy, cold scroll of etched iron. It seems ancient, humming with a faint, otherworldly energy.";
         }
-        return "Inside, the air is thick with the scent of old paper and forgotten time. After a thorough search of the official records, you find it: a heavy, cold scroll of etched iron. It seems ancient, humming with a faint, otherworldly energy.";
+        return "Inside, the air is thick with the scent of old paper. Following the tavern gossip, you search the Mayor's official records. You find it: a heavy, cold scroll of etched iron, hidden amongst land deeds. It seems ancient, humming with a faint, otherworldly energy.";
     },
     choices: [
       {
@@ -472,7 +472,7 @@ export const story: Record<string, Scene> = {
     image: "forest-edge",
     text: (state) => {
       if (state.piperInsight >= 5 && state.townFavor >= 2 && state.inventory.includes("Iron Scroll")) {
-        return "With the town's trust, the Piper's secrets, and the Iron Scroll in hand, you are ready. You have everything you need to face the melody and bring the children home.";
+        return "With the town's trust, an understanding of the Piper's magic, and the Iron Scroll in hand, you are ready. You have everything you need to face the melody and bring the children home.";
       }
       if (state.piperInsight >= 5 && state.inventory.includes("Iron Scroll")) {
         return "You have pieced together the arcane puzzle and found the Iron Scroll, but the town remains suspicious of you. You must proceed alone, your knowledge your only shield.";
@@ -522,7 +522,7 @@ export const story: Record<string, Scene> = {
     title: "A Terrible Truth",
     image: "good-ending",
     ending: true,
-    text: "Using the Iron Scroll, you counter the Piper's melody, but without the town's support, the magic is volatile. The spell shatters, freeing the children, but the backlash reveals a terrible truth: the Piper wasn't luring them to their doom, but saving them from a blight festering within Hamelin itself. He offers you a choice: leave with him to fight the true threat, or stay and watch the town slowly rot from within. Hamelin is saved for now, but you are left with a heavy burden of knowledge.",
+    text: "Using the Iron Scroll, you counter the Piper's melody, but without the town's support, the magic is volatile. The spell shatters, freeing the children, but the backlash reveals a terrible truth: the Piper wasn't luring them to their doom, but saving them from a blight festering within Hamelin itself—a sickness the town's founders buried and tried to forget. He offers you a choice: leave with him to fight the true threat, or stay and watch the town slowly rot from within. Hamelin is saved for now, but you are left with a heavy burden of knowledge.",
     choices: [{ text: "Play Again", nextScene: "start" }],
   }
 };
