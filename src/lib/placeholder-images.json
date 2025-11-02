@@ -81,7 +81,7 @@
     {
       "id": "forest-edge",
       "description": "The edge of a dark, pixelated forest.",
-      "imageUrl": "https://images.unsplash.com/photo-1620476251293-279585697223?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwaXhlbCUyMGFydCUyMGZvcmVzdCUyMGVkZ2V8ZW58MHx8fHwxNzYyMDMyMDQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/9.png",
       "imageHint": "pixel art forest"
     }
   ]
