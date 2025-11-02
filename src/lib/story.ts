@@ -345,7 +345,7 @@ export const story: Record<string, Scene> = {
   mayor_accepts: {
     id: "mayor_accepts",
     title: "A Fragile Alliance",
-    image: "dusty-archives",
+    image: "iron-scroll-archives",
     text: "Mayor Wilhelm, desperate for any aid, accepts your offer. 'Anything,' he pleads, 'Anything to bring our children back.' He grants you access to the town's records and archives, hoping you might find a clue his men have missed.",
     choices: [
       {
@@ -373,7 +373,7 @@ export const story: Record<string, Scene> = {
   archives_approach: {
     id: "archives_approach",
     title: "The Town Archives",
-    image: "dusty-archives",
+    image: "iron-scroll-archives",
     text: (state) => {
         let baseText = "You stand before the heavy oak doors of the town archives. ";
         if (state.inventory.includes("Iron Scroll Rumor") && state.inventory.includes("Contradictory Scroll Rumor")) {
@@ -417,7 +417,7 @@ export const story: Record<string, Scene> = {
     id: "archives_sneak_check",
     title: "Under Cover of Darkness",
     text: "You wait for nightfall and approach the archives. The guard is gone, but the lock on the heavy oak door is sturdy. How will you get in?",
-    image: "dusty-archives",
+    image: "iron-scroll-archives",
     choices: [
         {
             text: "Use the Crystalline Shard to resonate with the lock.",
@@ -434,7 +434,7 @@ export const story: Record<string, Scene> = {
   archives_search: {
     id: "archives_search",
     title: "Dust and Secrets",
-    image: "dusty-archives",
+    image: "iron-scroll-archives",
     text: (state) => {
         if (state.inventory.includes("Contradictory Scroll Rumor")) {
             return "Following the priest's lead, you ignore the official town records and look for older, pre-founding documents. You find a section on previous 'visitations' and a reference to the diary of the town's first priest.";
@@ -451,7 +451,7 @@ export const story: Record<string, Scene> = {
   archives_diary: {
     id: "archives_diary",
     title: "An Old Account",
-    image: "dusty-archives",
+    image: "iron-scroll-archives",
     text: "The diary is brittle with age. It describes a nearly identical event from a generation ago—a 'Piper' with a hypnotic melody, and the disappearance of the town's 'sinful'. The writer mentions hiding the town's true protection, an 'Iron Scroll', not in the official records, but within the church, 'under the gaze of the founders,' believing the mayor of his time to be corrupt.",
     choices: [
         {
@@ -593,5 +593,3 @@ export const story: Record<string, Scene> = {
     choices: [{ text: "Play Again", nextScene: "start" }],
   },
 }
-
-    
