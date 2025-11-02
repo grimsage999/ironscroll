@@ -63,19 +63,19 @@
     {
       "id": "bad-ending",
       "description": "A dark, foreboding pixel art alleyway at night.",
-      "imageUrl": "https://images.unsplash.com/photo-1581961053387-e6a397d2f5c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwaXhlbCUyMGFydCUyMGRhcmslMjBhbGxleXxlbnwwfHx8fDE3NjE5ODIwODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/bad-ending.png",
       "imageHint": "pixel art dark alley"
     },
     {
       "id": "good-ending",
       "description": "Sunlight breaking through clouds over a pixel art medieval town.",
-      "imageUrl": "https://images.unsplash.com/photo-1527377761-f99968ed8a7f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwaXhlbCUyMGFydCUyMHN1bmxpZ2h0fGVufDB8fHx8MTc2MTk4MjA4OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/good-ending.png",
       "imageHint": "pixel art sunlight"
     },
     {
       "id": "market-square",
       "description": "A bustling but tense pixel art market square.",
-      "imageUrl": "https://images.unsplash.com/photo-1629194966692-240c3d2dbf7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwaXhlbCUyMGFydCUyMG1lZGlldmFsJTIwbWFya2V0fGVufDB8fHx8MTc2MjAzMTg5NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://storage.googleapis.com/aai-web-samples/firebase-studio/hamelin-echo/market-square.png",
       "imageHint": "pixel art market"
     }
   ]
