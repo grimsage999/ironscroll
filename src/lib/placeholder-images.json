@@ -34,25 +34,13 @@
       "id": "market-square",
       "description": "A bustling but tense pixel art market square.",
       "imageUrl": "https://images.unsplash.com/photo-1629194966692-240c3d2dbf7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwaXhlbCUyMGFydCUyMG1lZGlldmFsJTIwbWFya2V0fGVufDB8fHx8MTc2MjAzMTg5NXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "pixel art medieval market"
-    },
-    {
-      "id": "church-interior",
-      "description": "The solemn, echoing interior of a pixel art church.",
-      "imageUrl": "https://images.unsplash.com/photo-1714360451863-e5890b35c588?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwaXhlbCUyMGFydCUyMGNodXJjaCUyMGludGVyaW9yfGVufDB8fHx8MTc2MjAzMTg5NXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "pixel art church interior"
-    },
-    {
-      "id": "sewer-tunnel",
-      "description": "A dark and damp pixel art sewer tunnel.",
-      "imageUrl": "https://images.unsplash.com/photo-1739631632573-79e7c6618fc7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwaXhlbCUyMGFydCUyMHNld2VyfGVufDB8fHx8MTc2MjAzMTg5NXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "pixel art sewer"
+      "imageHint": "pixel art market"
     },
     {
       "id": "forest-edge",
-      "description": "The edge of a dark, pixel art forest.",
-      "imageUrl": "https://images.unsplash.com/photo-1503515235263-c699356bfb17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGl4ZWwlMjBhcnQlMjBmb3Jlc3QlMjBlZGdlfGVufDB8fHx8MTc2MjAzMTg5NXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "pixel art forest edge"
+      "description": "The edge of a dark, pixelated forest.",
+      "imageUrl": "https://images.unsplash.com/photo-1620476251293-279585697223?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwaXhlbCUyMGFydCUyMGZvcmVzdCUyMGVkZ2V8ZW58MHx8fHwxNzYyMDMyMDQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pixel art forest"
     }
   ]
 }

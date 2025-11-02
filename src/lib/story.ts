@@ -1,3 +1,4 @@
+
 import type { Scene } from "@/lib/game/types";
 
 export const story: Record<string, Scene> = {
@@ -158,7 +159,6 @@ export const story: Record<string, Scene> = {
   church: {
     id: "church",
     title: "The House of Silence",
-    image: "church-interior",
     text: "The church is cold and empty, save for a frantic priest. Dust motes dance in the light from the stained-glass windows. On a lectern, a pile of hastily printed pamphlets. 'He sabotaged it!' the priest cries, pointing at the bell tower. 'The Warding Bell! For generations, it has been rung on the Day of Warding to keep the old evils at bay. But he severed the rope with... with his magic. A crystalline shard! The profane melody is a mockery of our most sacred ritual!'",
     choices: [
       {
@@ -179,7 +179,6 @@ export const story: Record<string, Scene> = {
   church_pamphlet: {
     id: "church_pamphlet",
     title: "A Dire Warning",
-    image: "church-interior",
     text: "The pamphlet is titled 'The Whispering Plague: A Sinner's Scourge'. It claims the Piper is a divine punishment for Hamelin's slide into greed and secularism. It calls for fasting and prayer, insisting that only piety can save the town. It ends with a chilling line: 'The Piper's song finds purchase only in the corrupted soul.'",
     choices: [
       {
@@ -197,7 +196,6 @@ export const story: Record<string, Scene> = {
   church_clue: {
     id: "church_clue",
     title: "A Resonant Clue",
-    image: "church-interior",
     text: "You climb the dusty steps to the bell tower. Near the severed bell rope, you find a shimmering crystalline shard. It hums faintly in your hand, vibrating at a frequency you can feel in your teeth. This was no ordinary act of vandalism; it was a targeted, ritualistic act.",
     choices: [
       {
@@ -219,7 +217,6 @@ export const story: Record<string, Scene> = {
   church_shard_reveal: {
     id: "church_shard_reveal",
     title: "A Fearful Recognition",
-    image: "church-interior",
     text: "You show the humming shard to the priest. His face drains of color. 'That... that is the Piper's magic. He uses them to focus his melody, to make the very stones of Hamelin resonate. He called it the 'resonant heart' of his instrument. He's turning our own town against us.'",
     choices: [
       {
@@ -236,7 +233,6 @@ export const story: Record<string, Scene> = {
   church_melody: {
     id: "church_melody",
     title: "A Profane Tune",
-    image: "church-interior",
     text: "'The Piper's music... it's a ritual,' the priest whispers, his eyes wide. 'It resonates with things that should not be disturbed. I heard it echo from the sewers, a dark counterpoint to the hymns. He was obsessed with the archives, too. Claimed our founding documents held the secret to the town's 'true name.' A blasphemy against Hamelin's history!'",
     choices: [
       {
@@ -257,7 +253,6 @@ export const story: Record<string, Scene> = {
   sewers_entrance: {
     id: "sewers_entrance",
     title: "The Gaping Maw",
-    image: "sewer-tunnel",
     text: "You find a sewer grate slightly ajar in a forgotten, refuse-strewn alley. A foul stench wafts out, mingling with the sickly-sweet scent of the strange herb. You can also hear a faint, rhythmic dripping and something else... a low hum, similar to the shard from the church.",
     choices: [
       {
@@ -274,7 +269,6 @@ export const story: Record<string, Scene> = {
   sewers_explore: {
     id: "sewers_explore",
     title: "Below Hamelin",
-    image: "sewer-tunnel",
     text: "The sewers are a labyrinth of filth and echoes. You find dozens of dead rats, all clutching the same sweet herb you found in the market. In the central cistern, you find arcane symbols painted on the walls, still glowing faintly. They seem to focus the strange energy you've felt, channeling it through the town's foundations.",
     choices: [
       {
@@ -299,7 +293,6 @@ export const story: Record<string, Scene> = {
   forest_outskirts: {
     id: "forest_outskirts",
     title: "The Whispering Woods",
-    image: "forest-edge",
     text: "The forest that borders Hamelin is unnaturally silent. You find a series of small, discarded wooden toys, leading a path into the woods. A lone huntsman warns you to turn back. 'That's the Gloomwood,' he says. 'Full of old magic. It sings a song that you can't stop following, especially if you're not right with the world.'",
     choices: [
       {
@@ -320,7 +313,6 @@ export const story: Record<string, Scene> = {
   forest_clue: {
     id: "forest_clue",
     title: "A Child's Trail",
-    image: "forest-edge",
     text: "You pick up one of the toys, a crudely carved wooden horse. It feels cold to the touch, and for a moment, you think you can hear a faint, childlike giggle on the wind. The trail of toys leads deeper into the oppressive woods.",
     choices: [
       {
@@ -336,7 +328,6 @@ export const story: Record<string, Scene> = {
   forest_path: {
     id: "forest_path",
     title: "The Singing Path",
-    image: "forest-edge",
     text: "'It's not a sound, it's a feeling,' the huntsman says, not meeting your eyes. 'Pulls at your soul. The Piper walked that path, and the forest has held his tune ever since. The children followed it, I'm sure of it.' He points to a barely-visible trail marked by a gnarled, ancient tree.",
     choices: [
       {
@@ -597,7 +588,9 @@ export const story: Record<string, Scene> = {
     title: "A Terrible Truth",
     image: "good-ending",
     ending: true,
-    text: "Using the Iron Scroll, you counter the Piper's melody, but without the town's support, the magic is volatile. The spell shatters, freeing the children, but the backlash reveals a terrible truth: the Piper wasn't luring them to their doom, but saving them from a blight festering within Hamelin itself—a sickness the town's founders buried and tried to forget. He offers you a choice: leave with him to fight the true threat, or stay and watch the town slowly rot from within. Hamelin is saved for now, but you are left with a heavy burden of knowledge.",
+    text: "Using the Iron Scroll, you counter the Piper's melody, but without the town's support, the magic is volatile. The spell shatters, freeing the children, but the backlash reveals a terrible truth: the Piper wasn't luring them to their doom, but saving them from a blight festering within Hamelin itself—a sickness the town's founders buried and tried to forget. He offers you a choice: leave with him to fight the true threat, or stay and watch the town slowly rot from within. Hamelin is saved for now, but you are left with a heavier burden.",
     choices: [{ text: "Play Again", nextScene: "start" }],
-  }
-};
+  },
+}
+
+    
